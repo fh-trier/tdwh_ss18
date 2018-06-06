@@ -1,0 +1,91 @@
+\section{Übung - AWK}
+\label{sec:uebung_08}
+Die Datei awk\_cust\_awk.csv im Verzeichnis csv hat folgenden Aufbau:
+
+\begin{minted}{bash}
+time;first;last;address;custvalue;custorders;id
+11:18:40 AM;allyson;dANIELS;2835 Schorsch;1617,39;21;1
+6:22:59 AM;LUNA;morse;9627 Pittsburgh;803,25;18;2
+9:06:12 PM;Jake;POOLE;6599 Midway Airport;271.46;13;3
+\end{minted}
+
+% ##########################################################################
+% ############################### Aufgabe 01 ###############################
+% ##########################################################################
+\label{subsec:uebung_08.aufgabe_01}
+\subsection{Aufgabe}
+Überprüfen Sie die CSV-Datei auf folgende Fehler und schreiben Sie die fehlerhaften Datensätze in eine Datei error\_cust\_data.csv. Beachten Sie dabei, dass in der ersten Zeile Spaltenüberschriften stehen und diese nicht geprüft werden müssen.
+
+\begin{itemize}
+\item Jede Zeile enthält genau 7 Felder
+\item Die Felder first und last bestehen ausschließlich aus Alphazeichen
+\item Die Uhrzeit im Feld time hat folgendes Format: hh:mm:ss AM/PM
+  \begin{itemize}
+    \item 1 oder 2-stellige Stundenangabe 1-12,
+    \item 2 stellige Minuten- und Sekundenangaben 0-59
+    \item gefolgt von einem Leerzeichen und AM oder PM
+    \item z.B.: 9:18:56 PM oder 11:00:00 AM
+  \end{itemize}
+\end{itemize}
+
+
+\subsubsection*{Lösung}
+\label{subsubsec:uebung_08.aufgabe_01.loesung}
+\inputawk{./awk/uebung_08_-_aufgabe_01.awk}
+
+
+% ##########################################################################
+% ############################### Aufgabe 02 ###############################
+% ##########################################################################
+\label{subsec:uebung_08.aufgabe_01}
+\subsection{Aufgabe}
+Erzeugen Sie mit AWK folgende Ausgabe, bei der die Spaltenüberschrift und die ersten 4 Kunden gefolgt von `………` ausgegeben werden.
+
+Anschließend folgt:
+\begin{itemize}
+  \item die Anzahl der Kunden
+  \item der kleinste Kundenwert
+  \item die Anzahl der insgesamt georderten und der durchschnittlich je Kunde georderten Bestellungen
+\end{itemize}
+
+\subsubsection*{Lösung}
+\label{subsubsec:uebung_08.aufgabe_02.loesung}
+\inputawk{./awk/uebung_08_-_aufgabe_02.awk}
+
+
+% ##########################################################################
+% ############################### Aufgabe 03 ###############################
+% ##########################################################################
+\label{subsec:uebung_08.aufgabe_01}
+\subsection{Aufgabe}
+Stellen Sie folgendes sicher (z.B. durch ersetzen der Werte) und überführen Sie die Datei in eine korrigierte CSV-Datei „cust\_bereinigt.csv“, in der alle Felder durch Komma getrennt sind.
+
+\begin{itemize}
+  \item Sorgen Sie dafür, dass jeder Vorname und Nachname mit einem Großbuchstaben beginnt und anschließend nur Kleinbuchstaben folgen. (Gehen Sie hier davon aus, dass Vor- und Nachnamen ausschließlich aus Alphazeichen bestehen. Es muss keine Ersetzung eventueller Ziffern oder Sonderzeichen in den Namen durchgeführt werden)
+  \item Übertragen Sie die Uhrzeit in das 24 Stunden-Format z. B.: aus `9:08:31 PM` wird `21:08:31` aus `7:45:13 AM` wird `7:45:13`
+\end{itemize}
+
+
+\subsubsection*{Lösung}
+\label{subsubsec:uebung_08.aufgabe_03.loesung}
+\inputawk{./awk/uebung_08_-_aufgabe_03.awk}
+
+
+% ##########################################################################
+% ############################### Aufgabe 04 ###############################
+% ##########################################################################
+\label{subsec:uebung_08.aufgabe_04}
+\subsection{Aufgabe}
+Bilde folgende Anforderungen durch einen regulären Ausdruck ab:
+
+\begin{itemize}
+  \item Eine Postleitzahl soll aus 4 bis 6 Ziffern bestehen, mit der Ziffer 5 beginnen und die letzte Ziffer darf keine 0 sein
+  \item Als Größe soll „Large“, „Extra Large“ oder „XX Large“ angegeben werden können.
+  \item Durch einen regulären Ausdruck soll sichergestellt werden, dass eine Uhrzeit (24 Stunden, 00 bis 23) im Format hh:mm:ss angegeben wird. Die Angabe der Sekunden soll dabei optional sein.
+  \item Das Datum soll in folgendem Format dargestellt werden: dd.mm.yyyy. Der Tag soll dabei zwischen dem 01. und 15 liegen und das Jahr zwischen 1990 und 2010.
+\end{itemize}
+
+
+\subsubsection*{Lösung}
+\label{subsubsec:uebung_08.aufgabe_03.loesung}
+\inputawk{./awk/uebung_08_-_aufgabe_04.awk}

@@ -223,3 +223,9 @@ TSWLatexianTemp*
 git-id.tmp
 git-date.tmp
 git-url.tmp
+
+# mac
+**/*DS_STORE
+
+# awk
+awk/error_cust_data.csv
