@@ -1,4 +1,4 @@
-\section{Übung}
+\section{Übung - Altklausur}
 \label{sec:uebung_01}
 
 % ##########################################################################
@@ -8,189 +8,165 @@
 \label{sec:uebung_01.aufgabe_01}
 Starten Sie das Skript.
 
+\label{subsubsec:uebung_01.aufgabe_01.loesung}
 \subsubsection*{Lösung}
-\label{sec:uebung_01.aufgabe_01.loesung}
+\inputsql{./sql/uebung_01/uebung_01_-_aufgabe_01.sql}
 
 
 % ##########################################################################
-% ################################# Minted #################################
+% ############################### Aufgabe 02 ###############################
 % ##########################################################################
-\section{Minted}
+\label{subsec:uebung_01.aufgabe_02}
+\subsection{Aufgabe}
+Legen Sie die Tabellen \textit{Adressen} und \textit{Orte} mit den nötigen Not Null Constraints an.
 
-% ############################### Begin-Block ##############################
-\subsection{Begin-Block}
-
-\subsubsection{AWK-Code}
-\begin{awkcode}
-  if NR > 3 {
-    print "0";
-  }
-\end{awkcode}
-
-\subsubsection{JSON}
-\begin{jsoncode}
-  {
-    "name": "Molecule Man",
-    "age": 29,
-    "secretIdentity": "Dan Jukes",
-    "powers": [
-      "Radiation resistance",
-      "Turning tiny",
-      "Radiation blast"
-    ]
-  }
-\end{jsoncode}
-
-\subsubsection{R-Code}
-\begin{rcode}
-  print(match(5, c(2,7,5,3))) #  5 is in 3rd place
-  print(seq(from=1,to=3,by=.5) %in% 1:3)
-\end{rcode}
-
-\subsubsection{SQL-Code}
-\begin{sqlcode}
-  SELECT *
-  FROM tab;
-\end{sqlcode}
-
-\subsubsection{XML}
-\begin{xmlcode}
-  <?xml version="1.0" encoding="UTF-8"?>
-  <note>
-    <to>Tove</to>
-    <from>Jani</from>
-    <heading>Reminder</heading>
-    <body>Don't forget me this weekend!</body>
-  </note>
-\end{xmlcode}
-
-% ################################ Input-File ###############################
-\subsection{Inputfile}
-
-\subsubsection{AWK-Code}
-\inputsql{examples/test.awk}
-
-\subsubsection{JSON}
-\inputsql{examples/test.json}
-
-\subsubsection{R-Code}
-\inputsql{examples/test.r}
-
-\subsubsection{SQL-Code}
-\inputsql{examples/test.sql}
-
-\subsubsection{XML}
-\inputsql{examples/test.xml}
-
-% ################################## Inline #################################
-\subsection{Inline}
-
-\subsubsection{SQL-Code}
-\sqlinline{SELECT * FROM tab;}
+\label{subsubsec:uebung_01.aufgabe_02.loesung}
+\subsubsection*{Lösung}
+\inputsql{./sql/uebung_01/uebung_01_-_aufgabe_02.sql}
 
 
 % ##########################################################################
-% ################################ Info-Boxen ##############################
+% ############################### Aufgabe 03 ###############################
 % ##########################################################################
-\section{Info-Boxen}
+\label{subsubsec:uebung_01.aufgabe_03}
+\subsection{Aufgabe}
+Ebenso sollen für die Tabellen \textit{Adressen} und \textit{Orte} jeweils ein geeignete Primary Key und die beiden Foreign Keys \textit{FK\_Mitarbeiter\_Adressen} und \textit{FK\_Adressen\_Orte} erstellt werden. Beachten Sie, dass beim Löschen eines Ortes in der Tabelle \textit{Orte}, die zugehörigen Adressen in der Tabelle \textit{Adressen} auch gelöscht werden sollen. Beim Löschen einer Adresse in der Tabelle \textit{Adressen}, sollen die entsprechenden \textit{Adressnr} in der Tabelle \textit{Mitarbeiter} mit \textit{NULL} ersetzt werden.
 
-% ################################### WARN #################################
-\begin{warn-popup}
-  Warn-Popup
-\end{warn-popup}
-
-% ################################### INFO #################################
-\begin{info-popup}
-  Info-Popup
-\end{info-popup}
-
-% ################################# Example ################################
-\begin{example-popup}
-  Example-Popup
-\end{example-popup}
+\label{subsubsec:uebung_01.aufgabe_03.loesung}
+\subsubsection*{Lösung}
+\inputsql{./sql/uebung_01/uebung_01_-_aufgabe_03.sql}
 
 
 % ##########################################################################
-% ################################# Akronyme ###############################
+% ############################### Aufgabe 04 ###############################
 % ##########################################################################
-\section{Akronyme}
-\acrfull{acr:sql}
-\acrlong{acr:sql}
-\acrshort{acr:sql}
+\label{subsec:uebung_01.aufgabe_04}
+\subsection{Aufgabe}
+Stellen Sie sicher, dass das \textit{Gehalt} in der Tabelle \textit{Mitarbeiter} immer $>=$ 0 ist.
 
-
-% ##########################################################################
-% ################################ Text-Boxen ##############################
-% ##########################################################################
-\section{Text-Boxen}
-\begin{textblock*}{\textwidth}(4cm,0cm)
-  Ich bin eine Textbox
-\end{textblock*}
+\label{subsubsec:uebung_01.aufgabe_04.loesung}
+\subsubsection*{Lösung}
+\inputsql{./sql/uebung_01/uebung_01_-_aufgabe_04.sql}
 
 
 % ##########################################################################
-% ############################### Aufzählungen #############################
+% ############################### Aufgabe 05 ###############################
 % ##########################################################################
-\section{Aufzählungen}
-\begin{itemize}[itemsep=0pt]
-  \item Item
-  \item Item
-  \item Item
-\end{itemize}
+\label{subsec:uebung_01.aufgabe_05}
+\subsection{Aufgabe}
+Der Tierpark hat heute ein neues Tier namens Lotta zur Aufzucht erhalten, dessen Geburtstag vor 5 Tagen war. Es handelt sich dabei um ein Krokodil, dass ausschließlich Fleisch isst. Zur Aufzucht nutzt der Tierpark das Gehege am Standort A1. Fügen Sie die Daten in die entsprechenden Tabellen ein.
 
-\begin{enumerate}[itemsep=0pt]
-  \item Item
-  \item Item
-  \item Item
-\end{enumerate}
+\label{subsubsec:uebung_01.aufgabe_5.loesung}
+\subsubsection*{Lösung}
+\inputsql{./sql/uebung_01/uebung_01_-_aufgabe_05.sql}
 
-\begin{itemize}[itemsep=0pt]
-  \item[A)] Item
-  \item[B)] Item
-  \item[C)] Item
-\end{itemize}
 
 % ##########################################################################
-% ################################# Tabellen ###############################
+% ############################### Aufgabe 06 ###############################
 % ##########################################################################
-\section{Tabellen}
+\label{subsec:uebung_01.aufgabe_06}
+\subsection{Aufgabe}
+Da der Mitarbeiter Peter Dallmann eine längere Zeit ausfällt, soll sein Gehege ab sofort von Elvira Huhn betreut werden.
 
-\begin{table}[H]
-  \begin{tabularx}{\textwidth}{X|X|X|X}
-    \textbf{FIRSTNAME} & \textbf{LASTNAME} & \textbf{BIRTHDAY} & \textbf{HIREDATE} \\
-    \hline\hline
-    Maximilian & Arbeitsscheu & 1998-06-21 & 2007-04-18 \\
-    Henry & Großkreutz & 1990-09-01 & 2009-02-10 \\
-    Leni & Mayer & 1996-10-15 & 2009-02-10 \\
-    $[$\dots$]$ & $[$\dots$]$ & $[$\dots$]$ & $[$\dots$]$ \\
-  \end{tabularx}
-  \caption{beispiel\_01}
-  \label{tbl:beispiel_01}
-\end{table}
+\label{subsubsec:uebung_01.aufgabe_6.loesung}
+\subsubsection*{Lösung}
+\inputsql{./sql/uebung_01/uebung_01_-_aufgabe_06.sql}
 
-\begin{table}[H]
-  \begin{tabularx}{\textwidth}{X|X|X|X}
-    \textbf{FIRSTNAME} & \textbf{LASTNAME} & \textbf{BIRTHDAY} & \textbf{HIREDATE} \\
-    \hline\hline
-    \multicolumn{2}{c|}{\textbf{Multi-column}} & 1998-06-21 & 2007-04-18 \\
-    Henry & Großkreutz & \multicolumn{2}{c}{\textbf{Multi-column}} \\
-    \multicolumn{3}{c|}{\textbf{Multi-column}} & 2009-02-10 \\
-    $[$\dots$]$ & $[$\dots$]$ & $[$\dots$]$ & $[$\dots$]$ \\
-  \end{tabularx}
-  \caption{beispiel\_02}
-  \label{tbl:beispiel_02}
-\end{table}
 
-\begin{table}[H]
-  \begin{tabularx}{\textwidth}{X|X|X|X}
-    \textbf{FIRSTNAME} & \textbf{LASTNAME} & \textbf{BIRTHDAY} & \textbf{HIREDATE} \\
-    \hline\hline
-    \multirow{2}{*}{\textbf{Multi-row}} & Arbeitsscheu & 1998-06-21 & 2007-04-18 \\
-    & Großkreutz & 1990-09-01 & 2009-02-10 \\
-    Leni & Mayer & 1996-10-15 & \multirow{2}{*}{\textbf{Multi-row}} \\
-    $[$\dots$]$ & $[$\dots$]$ & $[$\dots$]$ & \\
-    \hline
-  \end{tabularx}
-  \caption{beispiel\_03}
-  \label{tbl:beispiel_03}
-\end{table}
+% ##########################################################################
+% ############################### Aufgabe 07 ###############################
+% ##########################################################################
+\label{subsec:uebung_01.aufgabe_07}
+\subsection{Aufgabe}
+Erzeugen Sie eine Stored Procedure die alle Gehege (Gehegenr, Standort) aufsteigend nach Gehegenr ausgibt. Zusätzlich soll die Ausgabe um Achtung! ergänzt werden, wenn in einem Gehege Tiere der Spezies Loewen untergebracht sind.
+
+\label{subsubsec:uebung_01.aufgabe_7.loesung}
+\subsubsection*{Lösung}
+\inputsql{./sql/uebung_01/uebung_01_-_aufgabe_07.sql}
+
+
+% ##########################################################################
+% ############################### Aufgabe 08 ###############################
+% ##########################################################################
+\label{subsec:uebung_01.aufgabe_08}
+\subsection{Aufgabe}
+Stellen Sie sicher, dass beim Einfügen eines neuen Tieres die Tiernr aus einer Sequenz genommen wird. Legen Sie die Sequenz SEQ\_TIERNR mit einem Start bei 10 zuvor an.
+
+\label{subsubsec:uebung_01.aufgabe_8.loesung}
+\subsubsection*{Lösung}
+\inputsql{./sql/uebung_01/uebung_01_-_aufgabe_08.sql}
+
+
+% ##########################################################################
+% ############################### Aufgabe 09 ###############################
+% ##########################################################################
+\label{subsec:uebung_01.aufgabe_09}
+\subsection{Aufgabe}
+Stellen Sie sicher, dass einem Gehege nicht mehr Tiere als die maximal zulässige Anzahl zugeordnet werden können.
+\textit{Hinweis: Es müssen nur INSERT Statements beachtet werden!}
+
+\label{subsubsec:uebung_01.aufgabe_9.loesung}
+\subsubsection*{Lösung}
+\inputsql{./sql/uebung_01/uebung_01_-_aufgabe_09.sql}
+
+
+% ##########################################################################
+% ############################### Aufgabe 10 ###############################
+% ##########################################################################
+\label{subsec:uebung_01.aufgabe_10}
+\subsection{Aufgabe}
+Beantworten Sie die folgenden Aufgaben mit möglichst wenig SQL-Befehlen.
+
+% ############################### Aufgabe 10A ##############################
+\label{subsec:uebung_01.aufgabe_10a}
+\subsubsection{Aufgabe}
+Geben Sie alle Mitarbeiter/innen aus, die kein Gehege betreuen.
+
+\label{subsubsec:uebung_01.aufgabe_10a.loesung}
+\subsubsection*{Lösung}
+\inputsql{./sql/uebung_01/uebung_01_-_aufgabe_10a.sql}
+
+% ############################### Aufgabe 10B ##############################
+\label{subsec:uebung_01.aufgabe_10b}
+\subsubsection{Aufgabe}
+Geben Sie alle Mitarbeiter/innen aus, die kein Gehege betreuen.
+
+\label{subsubsec:uebung_01.aufgabe_10b.loesung}
+\subsubsection*{Lösung}
+\inputsql{./sql/uebung_01/uebung_01_-_aufgabe_10b.sql}
+
+% ############################### Aufgabe 10C ##############################
+\label{subsec:uebung_01.aufgabe_10c}
+\subsubsection{Aufgabe}
+Welches Gehege beherbergt welche Spezies? Die leeren Gehege sollen dabei auch angezeigt werden.
+
+\label{subsubsec:uebung_01.aufgabe_10c.loesung}
+\subsubsection*{Lösung}
+\inputsql{./sql/uebung_01/uebung_01_-_aufgabe_10c.sql}
+
+% ############################### Aufgabe 10D ##############################
+\label{subsec:uebung_01.aufgabe_10d}
+\subsubsection{Aufgabe}
+Welche Mitarbeiter/innen (Mitarbeiternr, Nachname) betreuen Gehege in denen Tier leben, deren Futter Obst, Pflanzen ist?
+
+\label{subsubsec:uebung_01.aufgabe_10d.loesung}
+\subsubsection*{Lösung}
+\inputsql{./sql/uebung_01/uebung_01_-_aufgabe_10d.sql}
+
+% ############################### Aufgabe 10E ##############################
+\label{subsec:uebung_01.aufgabe_10e}
+\subsubsection{Aufgabe}
+Welcher Mitarbeiter/in bzw. welche Mitarbeiter/innen haben das höchste Gehalt?
+
+\label{subsubsec:uebung_01.aufgabe_10e.loesung}
+\subsubsection*{Lösung}
+\inputsql{./sql/uebung_01/uebung_01_-_aufgabe_10e.sql}
+
+% ############################### Aufgabe 10F ##############################
+\label{subsec:uebung_01.aufgabe_10f}
+\subsubsection{Aufgabe}
+Wie viele Tiere besitzt der Tierpark je Spezies?
+
+\label{subsubsec:uebung_01.aufgabe_10f.loesung}
+\subsubsection*{Lösung}
+\inputsql{./sql/uebung_01/uebung_01_-_aufgabe_10f.sql}
