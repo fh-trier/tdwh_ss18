@@ -1,0 +1,283 @@
+% Dokumentanklasse: a4paper, 14pt
+% Beschreibung:     Dokumentenformat
+% Option:           extraarticle - ?
+\documentclass[12pt]{article}
+
+% Paket:            showframe
+% Beschreibung:     Blendet alle Frames (Textkörper, Fußzeile Kopzeile, Seitenrand) ein
+% Option:
+% \usepackage{showframe}
+
+% Paket:            geometry
+% Beschreibung:     A4 Seitenabstände
+% Option:
+\usepackage{geometry}
+\geometry{
+%  a4paper,           % Papierformat (wird auch über die Dokumentenklasse definiert)
+  top=2.7cm,          % Abstand Kopfseite   (Zwischen Kopfseite und Inhalt)
+  bottom=2cm,         % Abstand Fußseite    (Zwischen Fußseite und Inhalt)
+  left=2.5cm,         % Abstand Linkeseite  (Zwischen Linkerseite und Inhalt)
+  right=2cm,          % Abstand Rechteseite (Zwischen Recherseite und Inhalt)
+%  width=              %                    textwidth (+marginsep +marinparwidth)
+%  textwidth=15cm,     % Textbreite
+%  marginparsep=1cm,   % Randnotiztrennng
+%  marginparwidth=10cm,% Randnotizbreite
+%  height=             %                    textheight (+headheight +headsep + footskip)
+%  textheight=        % Texthöhe
+  headheight=1cm,     % Kopfhöhe
+  headsep=0.5cm,      % Kopftrennung        (Größe zwischen Kopfzeile und Inhalt)
+  footskip=1cm,       % Fußzeilenhöhe
+}
+
+% Paket:            ansmath
+% Beschreibung:     Zum darstellen von mathematischen Formeln
+\usepackage{amsmath}
+
+% Paket:            eurosym
+% Beschreibung:     Bildet das Euro-Zeichen in unterschiedlichen Varianten ab
+% Option:
+\usepackage{eurosym}
+
+% Paket:            ngerman
+% Beschreibung:     Deutsche Rechtschreibung
+% Option:           babel - Sibentrennung
+\usepackage[ngerman]{babel}
+
+% Paket:            utf8
+% Beschreibung:     Stellt Umlaute richtig dar
+% Option:           inputenc - Erlaubt die Darstellung der gleichen Zeichen (Character) wie sie in stdin überliefert werden
+\usepackage[utf8]{inputenc}
+
+% Paket:            makeindex
+% Beschreibung:     Ermöglicht das Indexieren von Wörter und den Befehl \printindex um den Index auszugeben
+\usepackage{makeidx}
+\makeindex
+
+% Paket:            natbib
+% Beschreibung:     Für Zitate
+% Option:           round - ?
+%\usepackage[round]{natbib}
+
+% Paket:            fancyhdr
+% Beschreibung:     Ermöglich ein generelles Seitenlayout ein zu stellen mit Kopf und Fußzeile.
+\usepackage{fancyhdr}
+
+% Paket:            graphicx
+% Beschreibung:     Einbinden von Bildern
+% Option:
+\usepackage{graphicx}
+
+% Paket:            enumitem
+% Beschreibung:     Zeilenabstände bei Aufzählungen definieren
+% Option:
+\usepackage{enumitem}
+
+% Paket:            pdflscape
+% Beschreibung:     Ermöglicht Seiten horizontal darzustellen
+% Option:           \begin{landscape} \end{landscape}
+\usepackage{pdflscape}
+
+% Paket:            float
+% Beschreibung:     Zum Ausrichten von Tabellen und Spalten bzw. deren Zentrierung
+% Option:
+% Restriktion:      Muss von Paket hyperref geladen werden. Ansonsten funktioniert das Paket nicht.
+\usepackage{float}
+
+% Paket:            multirow
+% Beschreibung:     Zum kombinieren mehrerer Zellen einer Tabelle
+% Option:
+\usepackage{multirow}
+
+% Paket:            courier
+% Beschreibung:     Lädt das Paket courier für Schriftarten mit fester Breite.
+% Befehle:          \ttfamily     Aktiviert Courier füt Tabellen bzw. generelle begin-Blöcke
+\usepackage{courier}
+
+% Paket:            appendix
+% Beschreibung:     Das Paket dient dazu, ausschließlich das Thema einer Überschrift in das Inhaltsverzeichnis zu überführen
+% Option:           appendix - Überführt die Überschriften des Anhangs richtig ins das Inhaltsverzeichnis
+\usepackage[titletoc]{appendix}
+
+% Paket:            glossaries
+% Beschreibung:
+% Option:
+\usepackage[toc,acronyms]{glossaries}
+\makeglossaries
+\include{glossar/glossar}
+
+% Paket:            setspace
+% Beschreibung:     Setz über die optionen den Zeilenabstand
+% Optionen:         Möglicher Zeilenabstand
+%                   singlespacing = 1,0
+%                   onehalfspacing = 1,5
+%                   doublespacing = 2,0
+% Restriktion:      Muss von Paket hyperref geladen werden. Ansonsten funktioniert das Paket nicht.
+\usepackage[onehalfspacing]{setspace}
+
+% Paket:            verbatim
+% Beschreibung:     Bildet einen Quelltext exakt ab.
+% Options:
+\usepackage{verbatim}
+
+% Packet:           Hyperref
+% Beschreibung:     Importiert hyperref um Querverweise mittels \hyperref zu erzeugen.
+\usepackage{hyperref}
+\hypersetup{
+  pdftitle={Tutorium},
+  pdfauthor={Markus Pesch},
+  pdfsubject={Datawarehouse}
+}
+
+% Packet:           Minted
+% Beschreibung:     Dient zum highlining von Quellcode wie beispielsweise Java, Bash oder Python.
+% Option/en:
+%   autogobble:       Leerzeichen zwischen linken Rand und Sourcecode einrücken bzw. weg schneiden.
+%   breaklines:       Automatische Zeilenumbrüche
+%   cache:            de- oder aktiviert den cache um Sourcecode zwischen zu speichern und so das PDF schneller zu erzeugen
+%   cachedir:         Definiert den Pfad zum cache, an dem minted seine Daten zwischen speichern kann
+%   fontfamily:       Die Schriftart die benutzt werden soll. tt, courier und helvetica sind vordefiniert.
+%   fontsize:         Die Schriftgröße die benutzt werden soll. Beispielsweise fontsize=\footnotesize
+%   linenos:          Zeilennummern
+%   keywordcase:      Änderung der Buchstaben. Takes lower, upper, or capitalize.
+%   showspaces:       Blendet Leerzeichen ein
+\usepackage[cache=true, cachedir=/tmp]{minted}
+
+% usemintedstyle
+% Gebe 'pygmentize -L styles' im Terminal ein um alle verfügbaren styles anzuzeigen.
+\usemintedstyle{tango}
+
+% newminted
+% Definiere neue aliase um einmalig ein highlighting pro Sprache zu deklarieren
+% \newminted{<makroname>}{optionen} ist verfügbar unter "<makroname>code"
+\newminted{awk}{autogobble=true, breaklines=true, linenos=true, keywordcase=upper}
+\newminted{json}{autogobble=true, breaklines=true, linenos=true}
+\newminted{r}{autogobble=true, breaklines=true, linenos=true}
+\newminted{sql}{autogobble=true, breaklines=true, linenos=true, keywordcase=upper}
+\newminted{xml}{autogobble=true, breaklines=true, linenos=true}
+
+% newmintedfile
+% Definiere neue Makros um automatisch Sourcecode aus Dateien zu highlighten.
+% \makroname{Dateipfad}
+\newmintedfile[inputawk]{awk}{autogobble=true, breaklines=true, linenos=true, keywordcase=upper}
+\newmintedfile[inputjson]{json}{autogobble=true, breaklines=true, linenos=true}
+\newmintedfile[inputr]{r}{autogobble=true, breaklines=true, linenos=true}
+\newmintedfile[inputsql]{sql}{autogobble=true, breaklines=true, linenos=true, keywordcase=upper}
+
+% newmintinline
+% Definiere neues Makro um Sourcecoude einzeiler zu highlighten
+\newmintinline{awk}{awkcode}
+\newmintinline{json}{jsoncode}
+\newmintinline{r}{rcode}
+\newmintinline{sql}{sqlcode}
+
+<<<<<<< HEAD
+=======
+
+\newmintedfile[inputawk]{awk}{
+  linenos,
+  autogobble,
+  breaklines,
+}
+
+>>>>>>> add: exericse 8
+% Packet:           tabularx
+% Beschreibung:     Werden Tabellen mit diesem Paket erstellt, ist es möglich Zeilenumbrüche in einer Zelle zu erzeugen
+\usepackage{tabularx}
+
+% Packet:           xcolor
+% Beschreibung:     Define own color schemas
+% Option:
+\usepackage{xcolor}
+
+% Definiere Farben
+\definecolor{blue}{HTML}{2E579F}
+\definecolor{green}{HTML}{1B8347}
+\definecolor{orange}{HTML}{FF7F00}
+\definecolor{red}{HTML}{D31C27}
+\definecolor{white}{HTML}{FFFFFF}
+
+% Packet:           framemethod
+% Beschreibung:
+% Option:
+\usepackage[framemethod=tikz]{mdframed}
+\mdtheorem[
+  linecolor=red,
+  frametitlefont=\sffamily\bfseries\color{white},
+  frametitlebackgroundcolor=red,
+]{warn-popup}{Warnung}[subsection]
+
+\mdtheorem[
+  linecolor=orange,
+  frametitlefont=\sffamily\bfseries\color{white},
+  frametitlebackgroundcolor=orange,
+]{info-popup}{Information}[subsection]
+
+\mdtheorem[
+  linecolor=green,
+  frametitlefont=\sffamily\bfseries\color{white},
+  frametitlebackgroundcolor=green,
+]{example-popup}{Beispiel}
+
+% Start des Dokuments
+\begin{document}
+
+  % Fetch Commit ID and Date
+  \immediate\write18{./git-info.sh commit > git-id.tmp}
+  \immediate\write18{./git-info.sh date > git-date.tmp}
+  \immediate\write18{./git-info.sh url > git-url.tmp}
+
+  % Importiere weitere .tex Dokumente
+  \include{titel//titel}
+  \pagebreak
+
+  % Pagestyle
+  % Setze das Seitenlayout auf fancyhdr um Fuß- und Kopfzeilen zu setzen
+  \pagestyle{fancy}
+
+  % Löscht alle Kopf- und Fußzeilen des pagestyles fancyhdr
+  \fancyhf{}
+
+  % Fuß- und Kopfzeile des Paketes fancyhdr
+  % [L] - Linkeseite      [O] - Ungerade Seitenzahlen         [LE,LO] - Linkeseite, Gerade- und Ungerade Seitenanzahlen
+  % [C] - Mitte           [E] - Gerade Seitenanzahlen         [CE]    - Seitenmitte, nur gerade Seitenanzahlen
+  % [R] - Rechteseite                                         [RO]    - Rechteseite, nur ungerade Seitenanzahlen
+  % \fancyhead    Kopfzeile
+  % \fancyfoot    Fußzeile
+  \fancyhead[L]{\rightmark}
+  \fancyhead[R]{\includegraphics[width=4cm]{img/logo.png}}
+  \fancyfoot[L]{Tutorium DWH SS18}
+  \fancyfoot[C]{}
+ 
+  % Pixelstärke der Kopf- und Fußzeilenlinie
+  \renewcommand{\headrulewidth}{1pt}
+  \renewcommand{\footrulewidth}{1pt}
+
+  % Agenda
+  \tableofcontents
+  \pagebreak
+
+  % Setze die Seitenbeginn zurück
+  \setcounter{page}{1}
+  \fancyfoot[R]{Seite \thepage}
+
+  % Importiere weitere .tex Dokumente
+  \include{uebungen//uebung_01}
+  \include{uebungen//uebung_02}
+  \include{uebungen//uebung_03}
+  \include{uebungen//uebung_04}
+  \include{uebungen//uebung_05}
+  \include{uebungen//uebung_06}
+  \include{uebungen//uebung_07}
+  \include{uebungen//uebung_08}
+  \include{anhang//anhang}
+
+  % Aufzählung aller Bilder
+  % \listoffigures
+
+  % Aufzählung aller Tabellen
+  % \listoftables
+
+  % Glossary
+  \printglossaries
+
+\end{document}
