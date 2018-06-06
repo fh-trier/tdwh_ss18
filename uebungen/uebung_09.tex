@@ -1,0 +1,48 @@
+\section{Übung - External Table}
+\label{sec:uebung_09}
+In einer CSV Datei (orders.csv) werden Bestelldaten gelistet, die in die Tabellen orders und order\_items aufgenommen werden sollen. Jede Zeile der Datei entspricht einer Bestellposition. Die Datei befindet sich auf dem Server Galway und ist über das Oracle-Directory student\_dir erreichbar.
+
+Dateiaufbau:
+
+\begin{minted}[  linenos,
+  autogobble,
+  breaklines,]{bash}
+order_id;order_date;channel_id;customer_id;order_status; sales_rep_id;product_id;line_item_id;quantity
+2362;11.06.2016 17:18:35;9;195;9;104;1781;1;2
+2362;11.06.2016 17:18:35;9;195;9;104;1803;2;10
+\end{minted}
+
+% ##########################################################################
+% ############################### Aufgabe 01 ###############################
+% ##########################################################################
+\label{subsec:uebung_09.aufgabe_01}
+\subsection{Aufgabe}
+Definiere eine externe Tabelle für die vorliegende Datei orders.csv.
+
+\subsubsection*{Lösung}
+\label{subsubsec:uebung_09.aufgabe_01.loesung}
+\inputsql{./sql/uebung_09/uebung_09_-_aufgabe_01.sql}
+
+
+% ##########################################################################
+% ############################### Aufgabe 02 ###############################
+% ##########################################################################
+\label{subsec:uebung_09.aufgabe_02}
+\subsection{Aufgabe}
+Übertrage mithilfe von zwei INSERT-Statements (INSERT INTO tab\_name SELECT …) alle Daten von der externen Tabelle in die Tabellen orders und order\_items. Als Unit Preis für die bestellten Produkte soll der Listenpreis verwendet werden. ORDER\_TOTAL soll aus der Summe der Einzelpositionen ermittelt werden.
+
+\subsubsection*{Lösung}
+\label{subsubsec:uebung_09.aufgabe_02.loesung}
+\inputsql{./sql/uebung_09/uebung_09_-_aufgabe_02.sql}
+
+
+% ##########################################################################
+% ############################### Aufgabe 03 ###############################
+% ##########################################################################
+\label{subsec:uebung_09.aufgabe_03}
+\subsection{Aufgabe}
+Definiere eine externe Tabelle die nur mit der order\_id, channel\_id und dem order\_status der CSV Datei geladen wird.
+
+\subsubsection*{Lösung}
+\label{subsubsec:uebung_09.aufgabe_03.loesung}
+\inputsql{./sql/uebung_09/uebung_09_-_aufgabe_03.sql}
