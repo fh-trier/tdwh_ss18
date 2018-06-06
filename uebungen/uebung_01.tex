@@ -1,172 +1,172 @@
-\label{sec:uebung_01}
 \section{Übung - Altklausur}
+\label{sec:uebung_01}
 
 % ##########################################################################
 % ############################### Aufgabe 01 ###############################
 % ##########################################################################
-\label{subsec:uebung_01.aufgabe_01}
 \subsection{Aufgabe}
+\label{subsec:uebung_01.aufgabe_01}
 Starten Sie das Skript.
 
-\label{subsubsec:uebung_01.aufgabe_01.loesung}
 \subsubsection*{Lösung}
+\label{subsubsec:uebung_01.aufgabe_01.loesung}
 \inputsql{./sql/uebung_01/uebung_01_-_aufgabe_01.sql}
 
 
 % ##########################################################################
 % ############################### Aufgabe 02 ###############################
 % ##########################################################################
-\label{subsec:uebung_01.aufgabe_02}
 \subsection{Aufgabe}
+\label{subsec:uebung_01.aufgabe_02}
 Legen Sie die Tabellen \textit{Adressen} und \textit{Orte} mit den nötigen Not Null Constraints an.
 
-\label{subsubsec:uebung_01.aufgabe_02.loesung}
 \subsubsection*{Lösung}
+\label{subsubsec:uebung_01.aufgabe_02.loesung}
 \inputsql{./sql/uebung_01/uebung_01_-_aufgabe_02.sql}
 
 
 % ##########################################################################
 % ############################### Aufgabe 03 ###############################
 % ##########################################################################
-\label{subsubsec:uebung_01.aufgabe_03}
 \subsection{Aufgabe}
+\label{subsubsec:uebung_01.aufgabe_03}
 Ebenso sollen für die Tabellen \textit{Adressen} und \textit{Orte} jeweils ein geeignete Primary Key und die beiden Foreign Keys \textit{FK\_Mitarbeiter\_Adressen} und \textit{FK\_Adressen\_Orte} erstellt werden. Beachten Sie, dass beim Löschen eines Ortes in der Tabelle \textit{Orte}, die zugehörigen Adressen in der Tabelle \textit{Adressen} auch gelöscht werden sollen. Beim Löschen einer Adresse in der Tabelle \textit{Adressen}, sollen die entsprechenden \textit{Adressnr} in der Tabelle \textit{Mitarbeiter} mit \textit{NULL} ersetzt werden.
 
-\label{subsubsec:uebung_01.aufgabe_03.loesung}
 \subsubsection*{Lösung}
+\label{subsubsec:uebung_01.aufgabe_03.loesung}
 \inputsql{./sql/uebung_01/uebung_01_-_aufgabe_03.sql}
 
 
 % ##########################################################################
 % ############################### Aufgabe 04 ###############################
 % ##########################################################################
-\label{subsec:uebung_01.aufgabe_04}
 \subsection{Aufgabe}
+\label{subsec:uebung_01.aufgabe_04}
 Stellen Sie sicher, dass das \textit{Gehalt} in der Tabelle \textit{Mitarbeiter} immer $>=$ 0 ist.
 
-\label{subsubsec:uebung_01.aufgabe_04.loesung}
 \subsubsection*{Lösung}
+\label{subsubsec:uebung_01.aufgabe_04.loesung}
 \inputsql{./sql/uebung_01/uebung_01_-_aufgabe_04.sql}
 
 
 % ##########################################################################
 % ############################### Aufgabe 05 ###############################
 % ##########################################################################
-\label{subsec:uebung_01.aufgabe_05}
 \subsection{Aufgabe}
+\label{subsec:uebung_01.aufgabe_05}
 Der Tierpark hat heute ein neues Tier namens Lotta zur Aufzucht erhalten, dessen Geburtstag vor 5 Tagen war. Es handelt sich dabei um ein Krokodil, dass ausschließlich Fleisch isst. Zur Aufzucht nutzt der Tierpark das Gehege am Standort A1. Fügen Sie die Daten in die entsprechenden Tabellen ein.
 
-\label{subsubsec:uebung_01.aufgabe_5.loesung}
 \subsubsection*{Lösung}
+\label{subsubsec:uebung_01.aufgabe_5.loesung}
 \inputsql{./sql/uebung_01/uebung_01_-_aufgabe_05.sql}
 
 
 % ##########################################################################
 % ############################### Aufgabe 06 ###############################
 % ##########################################################################
-\label{subsec:uebung_01.aufgabe_06}
 \subsection{Aufgabe}
+\label{subsec:uebung_01.aufgabe_06}
 Da der Mitarbeiter Peter Dallmann eine längere Zeit ausfällt, soll sein Gehege ab sofort von Elvira Huhn betreut werden.
 
-\label{subsubsec:uebung_01.aufgabe_6.loesung}
 \subsubsection*{Lösung}
+\label{subsubsec:uebung_01.aufgabe_6.loesung}
 \inputsql{./sql/uebung_01/uebung_01_-_aufgabe_06.sql}
 
 
 % ##########################################################################
 % ############################### Aufgabe 07 ###############################
 % ##########################################################################
-\label{subsec:uebung_01.aufgabe_07}
 \subsection{Aufgabe}
+\label{subsec:uebung_01.aufgabe_07}
 Erzeugen Sie eine Stored Procedure die alle Gehege (Gehegenr, Standort) aufsteigend nach Gehegenr ausgibt. Zusätzlich soll die Ausgabe um Achtung! ergänzt werden, wenn in einem Gehege Tiere der Spezies Loewen untergebracht sind.
 
-\label{subsubsec:uebung_01.aufgabe_7.loesung}
 \subsubsection*{Lösung}
+\label{subsubsec:uebung_01.aufgabe_7.loesung}
 \inputsql{./sql/uebung_01/uebung_01_-_aufgabe_07.sql}
 
 
 % ##########################################################################
 % ############################### Aufgabe 08 ###############################
 % ##########################################################################
-\label{subsec:uebung_01.aufgabe_08}
 \subsection{Aufgabe}
+\label{subsec:uebung_01.aufgabe_08}
 Stellen Sie sicher, dass beim Einfügen eines neuen Tieres die Tiernr aus einer Sequenz genommen wird. Legen Sie die Sequenz SEQ\_TIERNR mit einem Start bei 10 zuvor an.
 
-\label{subsubsec:uebung_01.aufgabe_8.loesung}
 \subsubsection*{Lösung}
+\label{subsubsec:uebung_01.aufgabe_8.loesung}
 \inputsql{./sql/uebung_01/uebung_01_-_aufgabe_08.sql}
 
 
 % ##########################################################################
 % ############################### Aufgabe 09 ###############################
 % ##########################################################################
-\label{subsec:uebung_01.aufgabe_09}
 \subsection{Aufgabe}
+\label{subsec:uebung_01.aufgabe_09}
 Stellen Sie sicher, dass einem Gehege nicht mehr Tiere als die maximal zulässige Anzahl zugeordnet werden können.
 \textit{Hinweis: Es müssen nur INSERT Statements beachtet werden!}
 
-\label{subsubsec:uebung_01.aufgabe_9.loesung}
 \subsubsection*{Lösung}
+\label{subsubsec:uebung_01.aufgabe_9.loesung}
 \inputsql{./sql/uebung_01/uebung_01_-_aufgabe_09.sql}
 
 
 % ##########################################################################
 % ############################### Aufgabe 10 ###############################
 % ##########################################################################
-\label{subsec:uebung_01.aufgabe_10}
 \subsection{Aufgabe}
+\label{subsec:uebung_01.aufgabe_10}
 Beantworten Sie die folgenden Aufgaben mit möglichst wenig SQL-Befehlen.
 
 % ############################### Aufgabe 10A ##############################
-\label{subsec:uebung_01.aufgabe_10a}
 \subsubsection{Aufgabe}
+\label{subsec:uebung_01.aufgabe_10a}
 Geben Sie alle Mitarbeiter/innen aus, die kein Gehege betreuen.
 
-\label{subsubsec:uebung_01.aufgabe_10a.loesung}
 \subsubsection*{Lösung}
+\label{subsubsec:uebung_01.aufgabe_10a.loesung}
 \inputsql{./sql/uebung_01/uebung_01_-_aufgabe_10a.sql}
 
 % ############################### Aufgabe 10B ##############################
-\label{subsec:uebung_01.aufgabe_10b}
 \subsubsection{Aufgabe}
+\label{subsec:uebung_01.aufgabe_10b}
 Geben Sie alle Mitarbeiter/innen aus, die kein Gehege betreuen.
 
-\label{subsubsec:uebung_01.aufgabe_10b.loesung}
 \subsubsection*{Lösung}
+\label{subsubsec:uebung_01.aufgabe_10b.loesung}
 \inputsql{./sql/uebung_01/uebung_01_-_aufgabe_10b.sql}
 
 % ############################### Aufgabe 10C ##############################
-\label{subsec:uebung_01.aufgabe_10c}
 \subsubsection{Aufgabe}
+\label{subsec:uebung_01.aufgabe_10c}
 Welches Gehege beherbergt welche Spezies? Die leeren Gehege sollen dabei auch angezeigt werden.
 
-\label{subsubsec:uebung_01.aufgabe_10c.loesung}
 \subsubsection*{Lösung}
+\label{subsubsec:uebung_01.aufgabe_10c.loesung}
 \inputsql{./sql/uebung_01/uebung_01_-_aufgabe_10c.sql}
 
 % ############################### Aufgabe 10D ##############################
-\label{subsec:uebung_01.aufgabe_10d}
 \subsubsection{Aufgabe}
+\label{subsec:uebung_01.aufgabe_10d}
 Welche Mitarbeiter/innen (Mitarbeiternr, Nachname) betreuen Gehege in denen Tier leben, deren Futter Obst, Pflanzen ist?
 
-\label{subsubsec:uebung_01.aufgabe_10d.loesung}
 \subsubsection*{Lösung}
+\label{subsubsec:uebung_01.aufgabe_10d.loesung}
 \inputsql{./sql/uebung_01/uebung_01_-_aufgabe_10d.sql}
 
 % ############################### Aufgabe 10E ##############################
-\label{subsec:uebung_01.aufgabe_10e}
 \subsubsection{Aufgabe}
+\label{subsec:uebung_01.aufgabe_10e}
 Welcher Mitarbeiter/in bzw. welche Mitarbeiter/innen haben das höchste Gehalt?
 
-\label{subsubsec:uebung_01.aufgabe_10e.loesung}
 \subsubsection*{Lösung}
+\label{subsubsec:uebung_01.aufgabe_10e.loesung}
 \inputsql{./sql/uebung_01/uebung_01_-_aufgabe_10e.sql}
 
 % ############################### Aufgabe 10F ##############################
-\label{subsec:uebung_01.aufgabe_10f}
 \subsubsection{Aufgabe}
+\label{subsec:uebung_01.aufgabe_10f}
 Wie viele Tiere besitzt der Tierpark je Spezies?
 
-\label{subsubsec:uebung_01.aufgabe_10f.loesung}
 \subsubsection*{Lösung}
+\label{subsubsec:uebung_01.aufgabe_10f.loesung}
 \inputsql{./sql/uebung_01/uebung_01_-_aufgabe_10f.sql}
