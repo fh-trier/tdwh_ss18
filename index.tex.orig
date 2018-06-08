@@ -179,7 +179,16 @@
   breaklines,
 }
 
+<<<<<<< HEAD
 >>>>>>> add: exericse 8
+=======
+\newmintedfile[inputawk]{awk}{
+  linenos,
+  autogobble,
+  breaklines,
+}
+
+>>>>>>> fix: exercise 6, task 2,3 tables
 % Packet:           tabularx
 % Beschreibung:     Werden Tabellen mit diesem Paket erstellt, ist es möglich Zeilenumbrüche in einer Zelle zu erzeugen
 \usepackage{tabularx}
@@ -269,7 +278,11 @@
   \include{uebungen//uebung_06}
   \include{uebungen//uebung_07}
   \include{uebungen//uebung_08}
+<<<<<<< HEAD
   \include{anhang//anhang}
+=======
+  \include{uebungen//uebung_09}
+>>>>>>> fix: exercise 6, task 2,3 tables
 
   % Aufzählung aller Bilder
   % \listoffigures
