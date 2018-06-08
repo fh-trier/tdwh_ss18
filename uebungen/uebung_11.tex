@@ -1,0 +1,75 @@
+\section{Übung - XML}
+\label{sec:uebung_11}
+
+% ##########################################################################
+% ############################### Aufgabe 01 ###############################
+% ##########################################################################
+\label{subsec:uebung_11.aufgabe_01}
+\subsection{Aufgabe}
+
+
+\subsubsection*{Lösung}
+\label{subsubsec:uebung_11.aufgabe_01.loesung}
+\inputsql{./loesungen/uebung_11/uebung_11_-_aufgabe_01.sql}
+
+
+% ##########################################################################
+% ############################### Aufgabe 02 ###############################
+% ##########################################################################
+\label{subsec:uebung_11.aufgabe_02}
+\subsection{Aufgabe}
+Füllen Sie diese mit den Werten aus der Tabelle DWH.Departments. Sie können dabei folgendes SQLX-Statement nutzen um die XML-Strukturen zu erzeugen.
+
+\subsubsection*{Lösung}
+\label{subsubsec:uebung_11.aufgabe_02.loesung}
+\inputsql{./loesungen/uebung_11/uebung_11_-_aufgabe_02.sql}
+
+
+% ##########################################################################
+% ############################### Aufgabe 03 ###############################
+% ##########################################################################
+\label{subsec:uebung_11.aufgabe_03}
+\subsection{Aufgabe}
+Prüfen Sie auf den XML-Dokumenten ob es Departments gibt, die keinen Manager besitzen? Falls ja, welche sind es?
+
+\subsubsection*{Lösung}
+\label{subsubsec:uebung_11.aufgabe_03.loesung}
+\inputsql{./loesungen/uebung_11/uebung_11_-_aufgabe_03.sql}
+
+
+% ##########################################################################
+% ############################### Aufgabe 04 ###############################
+% ##########################################################################
+\label{subsec:uebung_11.aufgabe_04}
+\subsection{Aufgabe}
+Geben Sie die Nummer und den Namen  aller Departments aus, die in Toronto liegen. Nutzen Sie dazu XMLQuery und das FLWOR Konstrukt.
+
+\subsubsection*{Lösung}
+\label{subsubsec:uebung_11.aufgabe_04.loesung}
+\inputsql{./loesungen/uebung_11/uebung_11_-_aufgabe_04.sql}
+
+
+% ##########################################################################
+% ############################### Aufgabe 05 ###############################
+% ##########################################################################
+\label{subsec:uebung_11.aufgabe_05}
+\subsection{Aufgabe}
+Erzeugen Sie eine XMLTable, die alle Elemente und Attribute der XML-Dokumente bereitstellt.
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{|l|l|l|l|}
+    \hline
+    \textbf{DEPTNO} & \textbf{NAME}    & \textbf{MANAGER} & \textbf{CITY} \\
+    \hline
+    70              & Public Relations & Baer             & Munich        \\
+    50              & Shipping         & Fripp South      & San Francisco \\
+    100             & Finance          & Greenberg        & Seattle       \\
+    20              & Marketing        & Hartstein        & Toronto       \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\subsubsection*{Lösung}
+\label{subsubsec:uebung_11.aufgabe_05.loesung}
+\inputsql{./loesungen/uebung_11/uebung_11_-_aufgabe_05.sql}
