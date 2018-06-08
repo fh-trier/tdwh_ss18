@@ -1,0 +1,24 @@
+{
+    "index": 6,
+    "active": true,
+    "age": 35,
+    "firstname": "Wilma Sparks",
+    "lastname": "Vega",
+    "gender": "female",
+    "email": "wilmavega@xoggle.com",
+    "phone": "+1 (861) 454-3116",
+    "address": "689 Roosevelt Court, Cowiche, North Carolina, 1759",
+    "registered": "2014-09-22T01:36:54 -02:00",
+    "items": [
+        {
+            "product_id": 3337,
+            "quantity": 59
+        },{
+            "product_id": 3355,
+            "quantity": 59
+        },{
+            "product_id": 1806,
+            "quantity": 38
+        }
+    ]
+}
