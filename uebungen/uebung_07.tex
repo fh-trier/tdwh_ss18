@@ -12,7 +12,7 @@ Zeige für jede Bestellposition die insgesamt in der Produktoberkategorie (Paren
   \centering
   \includegraphics[width=1\textwidth]{img//uebung_07_-_aufgabe_01.png}
   \label{img:uebung_07_-_aufgabe_01}
-\end{figure} 
+\end{figure}
 
 \subsubsection*{Lösung}
 \label{subsubsec:uebung_07.aufgabe_01.loesung}
@@ -26,9 +26,24 @@ Zeige für jede Bestellposition die insgesamt in der Produktoberkategorie (Paren
 \subsection{Aufgabe}
 Klassifiziere die Departments nach dem durchschnittlichen Gehalt der Mitarbeiter, die in jenem Department arbeiten, in drei Klassen.
 
-\begin{WARN}
-  Tabelle fehlt!
-\end{WARN}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{|l|l|l|l|}
+    \hline
+    \textbf{DEPT\_ID} & \textbf{DEPT\_NAME}  & \textbf{AVG\_SAL} & \textbf{CLASS} \\
+    \hline
+    140               & Control And Credit   & 0                 & 1              \\
+    260               & Recruiting           & 0                 & 1              \\
+    150               & Shareholder Services & 0                 & 1              \\
+    160               & Benefits             & 0                 & 1              \\
+    $[$\dots$]$       &                      &                   &                \\
+    20                & Marketing            & 9500              & 3              \\
+    70                & Public Relations     & 10000             & 3              \\
+    110               & Accounting           & 10154             & 3              \\
+    90                & Executive            & 19333,33          & 3              \\
+    \hline
+  \end{tabular}
+\end{table}
 
 \subsubsection*{Lösung}
 \label{subsubsec:uebung_07.aufgabe_02.loesung}
@@ -46,7 +61,7 @@ Welche sind die Top 4 Produktkategorien, gemessen am Umsatz, für alle Bestellun
   \centering
   \includegraphics[width=1\textwidth]{img//uebung_07_-_aufgabe_03.png}
   \label{img:uebung_07_-_aufgabe_03}
-\end{figure} 
+\end{figure}
 
 \subsubsection*{Lösung}
 \label{subsubsec:uebung_07.aufgabe_03.loesung}
@@ -64,7 +79,7 @@ Liste die Umsätze der einzelnen Monate für 2015 auf. Dabei sollen zusätzlich 
   \centering
   \includegraphics[width=1\textwidth]{img//uebung_07_-_aufgabe_04.png}
   \label{img:uebung_07_-_aufgabe_04}
-\end{figure} 
+\end{figure}
 
 \subsubsection*{Lösung}
 \label{subsubsec:uebung_07.aufgabe_04.loesung}
@@ -78,10 +93,27 @@ Liste die Umsätze der einzelnen Monate für 2015 auf. Dabei sollen zusätzlich 
 \subsection{Aufgabe}
 Erzeuge eine Ausgabe mit den Spalten COUNTRY\_NAME, CHANNEL\_DESC, SALES\$, RANG indem für die Vertriebskanäle alle Umsätze, die darüber gemacht wurden von März bis Juni 2008 aufgelistet und in der Spalte RANG den Rang innerhalb der Vertriebskanäle für das jeweilige Land vermerkt ist.
 
-Die Ausgabe könnte wie folgt aussehen:
-\begin{WARN}
-  Tabelle fehlt!
-\end{WARN}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{|l|l|l|l|}
+    \hline
+    \textbf{COUNTRY} & \textbf{CHANNEL\_DESC} & \textbf{SALES\$} & \textbf{RANG}  \\
+    \hline
+    Argentina        & Direct Sales           & 291299           & 1              \\
+    Argentina        & Partners               & 100131           & 2              \\
+    Argentina        & Catalog                & 57064            & 3              \\
+    Australia        & Tele Sales             & 717783           & 1              \\
+    Australia        & Internet               & 508367           & 2              \\
+    Australia        & Partners               & 452358           & 3              \\
+    Australia        & Catalog                & 175854           & 4              \\
+    Australia        & Direct Sales           & 47058            & 5              \\
+    Belgium          & Partners               & 661416           & 1              \\
+    Belgium          & Catalog                & 448693           & 2              \\
+    Belgium          & Direct Sales           & 144147           & 3              \\
+    $[$\dots$]$      &                        &                  &                \\
+    \hline
+  \end{tabular}
+\end{table}
 
 \subsubsection*{Lösung}
 \label{subsubsec:uebung_07.aufgabe_05.loesung}
