@@ -28,6 +28,7 @@ Klassifiziere die Departments nach dem durchschnittlichen Gehalt der Mitarbeiter
 
 \begin{table}[H]
   \centering
+  \ttfamily
   \begin{tabular}{|l|l|l|l|}
     \hline
     \textbf{DEPT\_ID} & \textbf{DEPT\_NAME}  & \textbf{AVG\_SAL} & \textbf{CLASS} \\
@@ -57,11 +58,20 @@ Klassifiziere die Departments nach dem durchschnittlichen Gehalt der Mitarbeiter
 \label{subsec:uebung_07.aufgabe_03}
 Welche sind die Top 4 Produktkategorien, gemessen am Umsatz, für alle Bestellungen aus dem Jahr 2014 die an Kunden aus Brasilien gingen?
 
-\begin{figure}[H]
+\begin{table}[H]
   \centering
-  \includegraphics[width=0.6\textwidth]{img//uebung_07_-_aufgabe_03.png}
-  \label{img:uebung_07_-_aufgabe_03}
-\end{figure}
+  \ttfamily
+  \begin{tabular}{|l|l|l|l|}
+    \hline
+    \textbf{P\_CATEGORY\_NAME} & \textbf{CATEGORY\_NAME}  & \textbf{UMSATZ} & \textbf{RANG} \\
+    \hline
+    hardware & hardware8 & 7228652 & 1 \\
+    software & software6 & 7145551 & 2 \\
+    hardware & hardware4 & 5216302 & 3 \\
+    hardware & hardware3 & 5051191 & 4 \\
+    \hline
+  \end{tabular}
+\end{table}
 
 \subsubsection*{Lösung}
 \label{subsubsec:uebung_07.aufgabe_03.loesung}
@@ -95,6 +105,7 @@ Erzeuge eine Ausgabe mit den Spalten COUNTRY\_NAME, CHANNEL\_DESC, SALES\$, RANG
 
 \begin{table}[H]
   \centering
+  \ttfamily
   \begin{tabular}{|l|l|l|l|}
     \hline
     \textbf{COUNTRY} & \textbf{CHANNEL\_DESC} & \textbf{SALES\$} & \textbf{RANG}  \\
