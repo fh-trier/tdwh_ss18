@@ -228,4 +228,4 @@ git-url.tmp
 **/*DS_STORE
 
 # awk
-awk/error_cust_data.csv
+*/error_cust_data.csv
