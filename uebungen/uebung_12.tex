@@ -6,12 +6,13 @@
 % ##########################################################################
 \label{subsec:uebung_12.aufgabe_01}
 \subsection{Aufgabe}
-Auf der Instanz GALWAY liegt im (ORACLE-)Directory \textit{STUDENT\_DIR} die CSV Datei \textit{sales4.dat} mit \textit{';'} als Trennzeichen. Auf das Directory \textit{STUDENT\_DIR} wurde ein \textit{'GRANT READ ON DIRECTORY  student\_dir TO PUBLIC'} gemacht.
+Auf der Instanz GALWAY liegt im (ORACLE-)Directory \texttt{STUDENT\_DIR} die CSV Datei \texttt{sales4.dat} mit \texttt{;} als Trennzeichen. Auf das Directory \texttt{STUDENT\_DIR }wurde ein \texttt{GRANT READ ON DIRECTORY  student\_dir TO PUBLIC} gemacht.
 
 Der Aufbau dieser CSV Datei:
 
 \begin{table}[H]
   \centering
+  \ttfamily
   \begin{tabular}{|l|l|l|l|l|}
     \hline
     \textbf{Spalte} & \textbf{Datentyp} & \textbf{Bemerkung} \\
@@ -49,7 +50,7 @@ Die ersten drei Sätze sehen so aus:
 % ############################### Aufgabe 01A ###############################
 \subsubsection{Aufgabe}
 \label{subsec:uebung_12.aufgabe_01a}
-Definieren Sie eine External Table \textit{SALES\_EXTERNAL}.
+Definieren Sie eine External Table \texttt{SALES\_EXTERNAL}.
 
 \paragraph{Lösung}
 \label{subsubsec:uebung_12.aufgabe_01a.loesung}
@@ -59,7 +60,7 @@ Definieren Sie eine External Table \textit{SALES\_EXTERNAL}.
 % ############################### Aufgabe 01B ###############################
 \subsubsection{Aufgabe}
 \label{subsec:uebung_12.aufgabe_01b}
-Wie viele verschiedene Kunden haben einen Eintrag in der \textit{sales4.dat} Datei?
+Wie viele verschiedene Kunden haben einen Eintrag in der \texttt{sales4.dat} Datei?
 
 \paragraph{Lösung}
 \label{subsubsec:uebung_12.aufgabe_01b.loesung}
@@ -93,6 +94,7 @@ Schreiben Sie eine Table Function, die für jeden Kunden, der in der Datei \text
 
 \begin{table}[H]
   \centering
+  \ttfamily
   \begin{tabular}{|l|l|l|l|l|}
     \hline
     \textbf{CUST\_ID} & \textbf{GESAMT\_UMSATZ} \\
@@ -313,10 +315,10 @@ Schreibe eine Table Function die zu jedem Mitarbeiter die Anzahl der bearbeitete
 \begin{table}[H]
   \centering
   \small
-  \fontfamily{courier_new}
+  \ttfamily
   \begin{tabular}{|l|l|l|l|l|l|l|}
     \hline
-    EMPNO        & EMP               & C*\_O & MAX\_SALES & DEPNO & DEPT             & C*\_ED \\
+    \textbf{EMPNO}& \textbf{EMP}     & \textbf{C*\_O} & \textbf{MAX\_SALES} & \textbf{DEPNO} & \textbf{DEPT} & \textbf{C*\_ED} \\
     \hline
      200         & Jennifer Whalen   & 0     &            & 10    & Administration   & 1 \\
      202         & Pat Fay           & 0     &            & 20    & Marketing        & 2 \\
@@ -395,6 +397,8 @@ Welche Mitarbeiter haben mindestens 2-mal den Job gewechselt? Gebe zusätzlich d
 Ermittelt für alle Monate im Jahr 2010 die Umsätze in der Produkt Category ‚Software‘ in diesem Monat und klassifiziere diese in ‘klein‘, ‘mittel‘ und ‘gross‘.Die Ausgabe könnte wie folgt aussehen:
 
 \begin{table}[H]
+  \centering
+  \ttfamily
   \begin{tabular}{|l|l|l|l|l|l|l|}
     \hline
     \textbf{MONTH}   & \textbf{SALES}   & \textbf{CATEGORY} \\
