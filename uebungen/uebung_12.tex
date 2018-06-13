@@ -4,7 +4,7 @@
 % ##########################################################################
 % ############################### Aufgabe 01 ###############################
 % ##########################################################################
-\label{sec:uebung_12.aufgabe_01}
+\label{subsec:uebung_12.aufgabe_01}
 \subsection{Aufgabe}
 Auf der Instanz GALWAY liegt im (ORACLE-)Directory \texttt{STUDENT\_DIR} die CSV Datei \texttt{sales4.dat} mit \texttt{;} als Trennzeichen. Auf das Directory \texttt{STUDENT\_DIR }wurde ein \texttt{GRANT READ ON DIRECTORY  student\_dir TO PUBLIC} gemacht.
 
@@ -49,47 +49,47 @@ Die ersten drei Sätze sehen so aus:
 
 % ############################### Aufgabe 01A ###############################
 \subsubsection{Aufgabe}
-\label{sec:uebung_12.aufgabe_01a}
+\label{subsec:uebung_12.aufgabe_01a}
 Definieren Sie eine External Table \texttt{SALES\_EXTERNAL}.
 
 \paragraph{Lösung}
-\label{sec:uebung_12.aufgabe_01a.loesung}
+\label{subsubsec:uebung_12.aufgabe_01a.loesung}
 \inputsql{./loesungen/uebung_12/uebung_12_-_aufgabe_01a.sql}
 
 
 % ############################### Aufgabe 01B ###############################
 \subsubsection{Aufgabe}
-\label{sec:uebung_12.aufgabe_01b}
+\label{subsec:uebung_12.aufgabe_01b}
 Wie viele verschiedene Kunden haben einen Eintrag in der \texttt{sales4.dat} Datei?
 
 \paragraph{Lösung}
-\label{sec:uebung_12.aufgabe_01b.loesung}
+\label{subsubsec:uebung_12.aufgabe_01b.loesung}
 \inputsql{./loesungen/uebung_12/uebung_12_-_aufgabe_01b.sql}
 
 
 % ############################### Aufgabe 01C ###############################
 \subsubsection{Aufgabe}
-\label{sec:uebung_12.aufgabe_01c}
+\label{subsec:uebung_12.aufgabe_01c}
 Wie viele Kunden haben mehr als eine Zeile in der Datei?
 
 \paragraph{Lösung}
-\label{sec:uebung_12.aufgabe_01c.loesung}
+\label{subsubsec:uebung_12.aufgabe_01c.loesung}
 \inputsql{./loesungen/uebung_12/uebung_12_-_aufgabe_01c.sql}
 
 
 % ############################### Aufgabe 01D ###############################
 \subsubsection{Aufgabe}
-\label{sec:uebung_12.aufgabe_01d}
+\label{subsec:uebung_12.aufgabe_01d}
 Welche zwei Produkte haben den geringsten Umsatz erwirtschaftet?
 
 \paragraph{Lösung}
-\label{sec:uebung_12.aufgabe_01d.loesung}
+\label{subsubsec:uebung_12.aufgabe_01d.loesung}
 \inputsql{./loesungen/uebung_12/uebung_12_-_aufgabe_01d.sql}
 
 
 % ############################### Aufgabe 01E ###############################
 \subsubsection{Aufgabe}
-\label{sec:uebung_12.aufgabe_01e}
+\label{subsec:uebung_12.aufgabe_01e}
 Schreiben Sie eine Table Function, die für jeden Kunden, der in der Datei \textit{sales4.dat} enthalten ist, den Gesamtumsatz ermittelt und ausgibt.
 
 \begin{table}[H]
@@ -106,7 +106,7 @@ Schreiben Sie eine Table Function, die für jeden Kunden, der in der Datei \text
 \end{table}
 
 \paragraph{Lösung}
-\label{sec:uebung_12.aufgabe_01e.loesung}
+\label{subsubsec:uebung_12.aufgabe_01e.loesung}
 \inputsql{./loesungen/uebung_12/uebung_12_-_aufgabe_01e.sql}
 
 
@@ -114,7 +114,7 @@ Schreiben Sie eine Table Function, die für jeden Kunden, der in der Datei \text
 % ############################### Aufgabe 02 ###############################
 % ##########################################################################
 \subsection{Aufgabe}
-\label{sec:uebung_12.aufgabe_02}
+\label{subsec:uebung_12.aufgabe_02}
 Nutzen Sie für die folgende Aufgabe die Tabelle \textit{ORDERS\_JSON} des Schemas \textit{MEURERM}. Geben Sie für jedes Land den insgesamt erwirtschafteten Umsatz je Stadt aus. Zusätzlich soll in einer weiteren Spalte der durchschnittliche Umsatz je Land angezeigt werden.
 
 Aufbau der JSON-Dokumente in \textit{JSON\_CONTENZ}:
@@ -122,7 +122,7 @@ Aufbau der JSON-Dokumente in \textit{JSON\_CONTENZ}:
 \inputjson{./data/uebung_12_-_aufgabe_02.json}
 
 \subsubsection*{Lösung}
-\label{sec:uebung_12.aufgabe_02.loesung}
+\label{subsubsec:uebung_12.aufgabe_02.loesung}
 \inputsql{./loesungen/uebung_12/uebung_12_-_aufgabe_02.sql}
 
 
@@ -130,44 +130,44 @@ Aufbau der JSON-Dokumente in \textit{JSON\_CONTENZ}:
 % ############################### Aufgabe 03 ###############################
 % ##########################################################################
 \subsection{Aufgabe}
-\label{sec:uebung_12.aufgabe_03}
+\label{subsec:uebung_12.aufgabe_03}
 Nutzen Sie für die folgenden Aufgaben das DWH-Schema der Instanz GALWAY.
 
 % ############################### Aufgabe 03A ###############################
 \subsubsection{Aufgabe}
-\label{sec:uebung_12.aufgabe_03a}
+\label{subsec:uebung_12.aufgabe_03a}
 Welche drei Vertriebskanäle waren im Jahr 2010 die Umsatzstärksten?
 
 \paragraph{Lösung}
-\label{sec:uebung_12.aufgabe_03a.loesung}
+\label{subsubsec:uebung_12.aufgabe_03a.loesung}
 \inputsql{./loesungen/uebung_12/uebung_12_-_aufgabe_03a.sql}
 
 % ############################### Aufgabe 03B ###############################
 \subsubsection{Aufgabe}
-\label{sec:uebung_12.aufgabe_03b}
+\label{subsec:uebung_12.aufgabe_03b}
 Welche drei Vertriebskanäle waren im Jahr 2010 die Umsatzstärksten?
 Geben Sie alle Mitarbeiter aus. Zusätzlich soll das größte Gehalt je Job und Abteilung ausgegeben werden.
 
 \paragraph*{Lösung}
-\label{sec:uebung_12.aufgabe_03b.loesung}
+\label{subsubsec:uebung_12.aufgabe_03b.loesung}
 \inputsql{./loesungen/uebung_12/uebung_12_-_aufgabe_03b.sql}
 
 % ############################### Aufgabe 03C ###############################
 \subsubsection{Aufgabe}
-\label{sec:uebung_12.aufgabe_03c}
+\label{subsec:uebung_12.aufgabe_03c}
 Welcher Kunde aus „Middle East and Africa“ hat im Jahr 2014 den größten Umsatz generiert, bezogen auf die Produktkategorie „software“?
 
 \paragraph*{Lösung}
-\label{sec:uebung_12.aufgabe_03c.loesung}
+\label{subsubsec:uebung_12.aufgabe_03c.loesung}
 \inputsql{./loesungen/uebung_12/uebung_12_-_aufgabe_03c.sql}
 
 % ############################### Aufgabe 03D ###############################
 \subsubsection{Aufgabe}
-\label{sec:uebung_12.aufgabe_03d}
+\label{subsec:uebung_12.aufgabe_03d}
 Zur Personalübersicht sollen alle Departments mit Anzahl der Mitarbeiter und dem summierten Gehalt ausgegeben werden. Zusätzlich soll diese Information auch noch über alle Departments angezeigt werden.
 
 \paragraph*{Lösung}
-\label{sec:uebung_12.aufgabe_03d.loesung}
+\label{subsubsec:uebung_12.aufgabe_03d.loesung}
 \inputsql{./loesungen/uebung_12/uebung_12_-_aufgabe_03d.sql}
 
 
@@ -175,36 +175,36 @@ Zur Personalübersicht sollen alle Departments mit Anzahl der Mitarbeiter und de
 % ############################### Aufgabe 04 ###############################
 % ##########################################################################
 \subsection{Aufgabe}
-\label{sec:uebung_12.aufgabe_04}
+\label{subsec:uebung_12.aufgabe_04}
 Erstellen Sie sich lokale Kopien der benötigten Tabellen, sofern Sie keine besitzen. Im Verzeichnis \textit{data} befindet sich die Datei \textit{uebung\_12\_-\_aufgabe\_04.sql} die die unten Abgebildeten SQL-Statements beinhaltet.
 
 \inputsql{./data/uebung_12_-_aufgabe_04.sql}
 
 % ############################### Aufgabe 04A ###############################
 \subsubsection{Aufgabe}
-\label{sec:uebung_12.aufgabe_04a}
+\label{subsec:uebung_12.aufgabe_04a}
 Erzeugen Sie ein Data Mart basierend auf einem Materialized View, das für jede Region angibt
 wie viele Produkte (Menge) über die jeweiligen Absatzkanäle vertrieben wurden.
 
 \paragraph*{Lösung}
-\label{sec:uebung_12.aufgabe_04a.loesung}
+\label{subsubsec:uebung_12.aufgabe_04a.loesung}
 \inputsql{./loesungen/uebung_12/uebung_12_-_aufgabe_04a.sql}
 
 % ############################### Aufgabe 04B ###############################
 \subsubsection{Aufgabe}
-\label{sec:uebung_12.aufgabe_04b}
+\label{subsec:uebung_12.aufgabe_04b}
 Erzeugen Sie ein Data Mart basierend auf einem Materialized View, das für jede Region angibt
 wie viele Produkte (Menge) über die jeweiligen Absatzkanäle vertrieben wurden.
 
 \paragraph*{Lösung}
-\label{sec:uebung_12.aufgabe_04b.loesung}
+\label{subsubsec:uebung_12.aufgabe_04b.loesung}
 \inputsql{./loesungen/uebung_12/uebung_12_-_aufgabe_04b.sql}
 
 
 % ##########################################################################
 % ############################### Aufgabe 05 ###############################
 % ##########################################################################
-\label{sec:uebung_12.aufgabe_05}
+\label{subsec:uebung_12.aufgabe_05}
 \subsection{Aufgabe}
 \begin{itemize}
   \item Zeige für jede Bestellung an, wie hoch der Bestellwert der Vorgänger-Bestellung war.
@@ -218,7 +218,7 @@ wie viele Produkte (Menge) über die jeweiligen Absatzkanäle vertrieben wurden.
 \end{figure}
 
 \subsubsection{Lösung}
-\label{sec:uebung_12.aufgabe_05.loesung}
+\label{subsubsec:uebung_12.aufgabe_05.loesung}
 \inputsql{./loesungen/uebung_12/uebung_12_-_aufgabe_05.sql}
 
 
@@ -226,7 +226,7 @@ wie viele Produkte (Menge) über die jeweiligen Absatzkanäle vertrieben wurden.
 % ############################### Aufgabe 06 ###############################
 % ##########################################################################
 \subsection{Aufgabe}
-\label{sec:uebung_12.aufgabe_06}
+\label{subsec:uebung_12.aufgabe_06}
 Zeige für jeden Mitarbeiter das höchste Gehalt in seiner Abteilung und innerhalb seines Jobs.
 
 \begin{figure}[H]
@@ -236,7 +236,7 @@ Zeige für jeden Mitarbeiter das höchste Gehalt in seiner Abteilung und innerha
 \end{figure}
 
 \subsubsection*{Lösung}
-\label{sec:uebung_12.aufgabe_06.loesung}
+\label{subsubsec:uebung_12.aufgabe_06.loesung}
 \inputsql{./loesungen/uebung_12/uebung_12_-_aufgabe_06.sql}
 
 
@@ -244,7 +244,7 @@ Zeige für jeden Mitarbeiter das höchste Gehalt in seiner Abteilung und innerha
 % ############################### Aufgabe 07 ###############################
 % ##########################################################################
 \subsection{Aufgabe}
-\label{sec:uebung_12.aufgabe_07}
+\label{subsec:uebung_12.aufgabe_07}
 Zeige für jede Bestellung den in dem betreffenden Jahr insgesamt erwirtschafteten Umsatz (Summe aller Bestellwerte).
 
 \begin{figure}[H]
@@ -254,7 +254,7 @@ Zeige für jede Bestellung den in dem betreffenden Jahr insgesamt erwirtschaftet
 \end{figure}
 
 \subsubsection*{Lösung}
-\label{sec:uebung_12.aufgabe_07.loesung}
+\label{subsubsec:uebung_12.aufgabe_07.loesung}
 \inputsql{./loesungen/uebung_12/uebung_12_-_aufgabe_07.sql}
 
 
@@ -262,11 +262,11 @@ Zeige für jede Bestellung den in dem betreffenden Jahr insgesamt erwirtschaftet
 % ############################### Aufgabe 08 ###############################
 % ##########################################################################
 \subsection{Aufgabe}
-\label{sec:uebung_12.aufgabe_08}
+\label{subsec:uebung_12.aufgabe_08}
 Welche 2 Mitarbeiter haben die meisten Bestellungen bearbeitet (SALES\_REP\_ID in ORDERS)?
 
 \subsubsection*{Lösung}
-\label{sec:uebung_12.aufgabe_08.loesung}
+\label{subsubsec:uebung_12.aufgabe_08.loesung}
 \inputsql{./loesungen/uebung_12/uebung_12_-_aufgabe_08.sql}
 
 
@@ -274,11 +274,11 @@ Welche 2 Mitarbeiter haben die meisten Bestellungen bearbeitet (SALES\_REP\_ID i
 % ############################### Aufgabe 09 ###############################
 % ##########################################################################
 \subsection{Aufgabe}
-\label{sec:uebung_12.aufgabe_09}
+\label{subsec:uebung_12.aufgabe_09}
 
 % ############################### Aufgabe 09a ###############################
 \subsubsection{Aufgabe}
-\label{sec:uebung_12.aufgabe_09a}
+\label{subsec:uebung_12.aufgabe_09a}
 Gebt für jede Produktoberkategorie die Umsätze der Jahre 2014 bis 2016 in einer Zeile an. Die Umsätze der einzelnen Jahre sollen dabei in einer separaten Spalte dargestellt werden.
 
 \begin{figure}[H]
@@ -288,16 +288,16 @@ Gebt für jede Produktoberkategorie die Umsätze der Jahre 2014 bis 2016 in eine
 \end{figure}
 
 \paragraph*{Lösung}
-\label{sec:uebung_12.aufgabe_09a.loesung}
+\label{subsubsec:uebung_12.aufgabe_09a.loesung}
 \inputsql{./loesungen/uebung_12/uebung_12_-_aufgabe_09a.sql}
 
 % ############################### Aufgabe 09b ###############################
 \subsubsection{Aufgabe}
-\label{sec:uebung_12.aufgabe_09b}
+\label{subsec:uebung_12.aufgabe_09b}
 Nutzt den Pivot Operator um die Abfrage aus a) abzubilden.
 
 \paragraph*{Lösung}
-\label{sec:uebung_12.aufgabe_09b.loesung}
+\label{subsubsec:uebung_12.aufgabe_09b.loesung}
 \inputsql{./loesungen/uebung_12/uebung_12_-_aufgabe_09b.sql}
 
 
@@ -305,11 +305,11 @@ Nutzt den Pivot Operator um die Abfrage aus a) abzubilden.
 % ############################### Aufgabe 10 ###############################
 % ##########################################################################
 \subsection{Aufgabe}
-\label{sec:uebung_12.aufgabe_10}
+\label{subsec:uebung_12.aufgabe_10}
 
 % ############################### Aufgabe 10a ###############################
 \subsubsection{Aufgabe}
-\label{sec:uebung_12.aufgabe_10a}
+\label{subsubsec:uebung_12.aufgabe_10a}
 Schreibe eine Table Function die zu jedem Mitarbeiter die Anzahl der bearbeiteten Bestellungen, den größten Bestellumsatz, seine Abteilung und die Anzahl der Mitarbeiter, die in derselben Abteilung arbeiten, ausgibt.
 
 \begin{table}[H]
@@ -337,16 +337,16 @@ Schreibe eine Table Function die zu jedem Mitarbeiter die Anzahl der bearbeitete
 \end{table}
 
 \paragraph*{Lösung}
-\label{sec:uebung_12.aufgabe_10a.loesung}
+\label{subsubsec:uebung_12.aufgabe_10a.loesung}
 \inputsql{./loesungen/uebung_12/uebung_12_-_aufgabe_10a.sql}
 
 % ############################### Aufgabe 10b ###############################
 \subsubsection{Aufgabe}
-\label{sec:uebung_12.aufgabe_10b}
-Ändere die Table Function aus Aufgabe \ref{sec:uebung_12.aufgabe_10a} in eine Pipelined Table Function.
+\label{subsec:uebung_12.aufgabe_10b}
+Ändere die Table Function aus Aufgabe \ref{subsubsec:uebung_12.aufgabe_10a} in eine Pipelined Table Function.
 
 \paragraph*{Lösung}
-\label{sec:uebung_12.aufgabe_10b.loesung}
+\label{subsubsec:uebung_12.aufgabe_10b.loesung}
 \inputsql{./loesungen/uebung_12/uebung_12_-_aufgabe_10b.sql}
 
 
@@ -354,8 +354,8 @@ Schreibe eine Table Function die zu jedem Mitarbeiter die Anzahl der bearbeitete
 % ############################### Aufgabe 11 ###############################
 % ##########################################################################
 \subsection{Aufgabe}
-\label{sec:uebung_12.aufgabe_11}
-Schreibe eine Procedure die mittels Native Dynamic SQL alle Kundennamen ausgibt die einem übergebenen Pattern entsprechen. Dabei soll Groß- bzw. Kleinschreibung nicht berücksichtigt
+\label{subsec:uebung_12.aufgabe_11}
+Schreibe eine Procedure die mittels Native Dynamic SQL alle Kundennamen ausgibt die einem übergebenen Pattern entsprechen. Dabei soll Groß- bzw. Kleinschreibung nicht berücksichtigt 
 werden.
 
 \begin{minted}[linenos, autogobble, breaklines,]{sql}
@@ -367,7 +367,7 @@ werden.
 \end{minted}
 
 \subsubsection*{Lösung}
-\label{sec:uebung_12.aufgabe_11.loesung}
+\label{subsubsec:uebung_12.aufgabe_11.loesung}
 \inputsql{./loesungen/uebung_12/uebung_12_-_aufgabe_11.sql}
 
 
@@ -375,17 +375,34 @@ werden.
 % ############################### Aufgabe 12 ###############################
 % ##########################################################################
 \subsection{Aufgabe}
-\label{sec:uebung_12.aufgabe_12}
+\label{subsec:uebung_12.aufgabe_12}
 Welche Mitarbeiter haben mindestens 2-mal den Job gewechselt? Gebe zusätzlich die Anzahl der vorherigen Jobs, den aktuellen Job sowie das Startdatum des aktuellen Jobs an.
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=1\textwidth]{img//uebung_12_-_aufgabe_12.png}
-  \label{img:uebung_12_-_aufgabe_12}
-\end{figure}
+\begin{table}[H]
+  \footnotesize
+  \ttfamily
+  \begin{tabular}{|l|l|l|l|l|l|}
+    \hline
+    \textbf{EMPNO}& \textbf{FIRST\_NAME}     & \textbf{LAST\_NAME} & \textbf{PREV\_JOBS} & \textbf{START\_ACT\_JOB} \\
+    \hline
+    200 & Jennifer & Whalen & 2& 01.01.07 \\
+    101 & Neena & Kochhar & 2 & 16.03.05  \\
+    176 & Jonathon & Taylor & 2 & 01.01.08 \\
+     \hline
+  \end{tabular}
+  \begin{tabular}{|l|}
+      \hline
+      \textbf{ACT\_JOB} \\
+      \hline
+      Administration Assistant \\
+      Adminstration Vice President \\
+      Sales Representative \\
+       \hline
+    \end{tabular}
+\end{table}
 
 \subsubsection*{Lösung}
-\label{sec:uebung_12.aufgabe_12.loesung}
+\label{subsubsec:uebung_12.aufgabe_12.loesung}
 \inputsql{./loesungen/uebung_12/uebung_12_-_aufgabe_12.sql}
 
 
@@ -393,7 +410,7 @@ Welche Mitarbeiter haben mindestens 2-mal den Job gewechselt? Gebe zusätzlich d
 % ############################### Aufgabe 13 ###############################
 % ##########################################################################
 \subsection{Aufgabe}
-\label{sec:uebung_12.aufgabe_13}
+\label{subsec:uebung_12.aufgabe_13}
 Ermittelt für alle Monate im Jahr 2010 die Umsätze in der Produkt Category ‚Software‘ in diesem Monat und klassifiziere diese in ‘klein‘, ‘mittel‘ und ‘gross‘.Die Ausgabe könnte wie folgt aussehen:
 
 \begin{table}[H]
@@ -420,7 +437,7 @@ Ermittelt für alle Monate im Jahr 2010 die Umsätze in der Produkt Category ‚
 \end{table}
 
 \subsubsection*{Lösung}
-\label{sec:uebung_12.aufgabe_13.loesung}
+\label{subsubsec:uebung_12.aufgabe_13.loesung}
 \inputsql{./loesungen/uebung_12/uebung_12_-_aufgabe_13.sql}
 
 
@@ -428,32 +445,32 @@ Ermittelt für alle Monate im Jahr 2010 die Umsätze in der Produkt Category ‚
 % ############################### Aufgabe 14 ###############################
 % ##########################################################################
 \subsection{Aufgabe}
-\label{sec:uebung_12.aufgabe_14}
+\label{subsec:uebung_12.aufgabe_14}
 
 % ############################### Aufgabe 14a ###############################
 \subsubsection{Aufgabe}
-\label{sec:uebung_12.aufgabe_14a}
+\label{subsubsec:uebung_12.aufgabe_14a}
 Schreibe eine Table Function, der eine Referenz auf einen Cursor übergeben wird. Dieser soll Bestelldatensätze beinhalten und es soll für jede übergebene Bestellung die \textit{order\_id}, das \textit{Bestelldatum}, die \textit{Anzahl der Bestellpositionen}, der \textit{Absatzkanal} und der \textit{Name des Kunden} ausgegeben werden.
 
 Ein Aufruf der Funktion könnte wie folgt aussehen:
 \begin{minted}[linenos, autogobble, breaklines,]{sql}
-SELECT *
+SELECT * 
 FROM TABLE(
   tf_prod(CURSOR(SELECT * FROM orders WHERE order_id <2356))
 );
 \end{minted}
 
 \paragraph*{Lösung}
-\label{sec:uebung_12.aufgabe_14a.loesung}
+\label{subsubsec:uebung_12.aufgabe_14a.loesung}
 \inputsql{./loesungen/uebung_12/uebung_12_-_aufgabe_14a.sql}
 
 % ############################### Aufgabe 14b ###############################
 \subsubsection{Aufgabe}
-\label{sec:uebung_12.aufgabe_14b}
+\label{subsec:uebung_12.aufgabe_14b}
 Ändere die Table Function aus Aufgabe \ref{subsubsec:uebung_12.aufgabe_14a} in eine Pipelined Table Function.
 
 \paragraph*{Lösung}
-\label{sec:uebung_12.aufgabe_14b.loesung}
+\label{subsubsec:uebung_12.aufgabe_14b.loesung}
 \inputsql{./loesungen/uebung_12/uebung_12_-_aufgabe_14b.sql}
 
 
@@ -461,8 +478,8 @@ FROM TABLE(
 % ############################### Aufgabe 15 ###############################
 % ##########################################################################
 \subsection{Aufgabe}
-\label{sec:uebung_12.aufgabe_15}
-Zeigen Sie, wie im abgebildeten Schema eine Änderung des Attributes \glqq{}LastName\grqq{} der Tabelle \glqq{}DimSalesPerson\grqq{} nach
+\label{subsec:uebung_12.aufgabe_15}
+Zeigen Sie, wie im abgebildeten Schema eine Änderung des Attributes \glqq{}LastName\grqq{} der Tabelle \glqq{}DimSalesPerson\grqq{} nach 
 
 \begin{itemize}[itemsep=0pt]
   \item[a)] Typ 2
