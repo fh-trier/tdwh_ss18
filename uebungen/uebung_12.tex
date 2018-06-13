@@ -453,12 +453,12 @@ Ermittelt für alle Monate im Jahr 2010 die Umsätze in der Produkt Category ‚
 Schreibe eine Table Function, der eine Referenz auf einen Cursor übergeben wird. Dieser soll Bestelldatensätze beinhalten und es soll für jede übergebene Bestellung die \textit{order\_id}, das \textit{Bestelldatum}, die \textit{Anzahl der Bestellpositionen}, der \textit{Absatzkanal} und der \textit{Name des Kunden} ausgegeben werden.
 
 Ein Aufruf der Funktion könnte wie folgt aussehen:
-\begin{minted}[linenos, autogobble, breaklines,]{sql}
+\begin{sqlcode}
 SELECT * 
 FROM TABLE(
   tf_prod(CURSOR(SELECT * FROM orders WHERE order_id <2356))
 );
-\end{minted}
+\end{sqlcode}
 
 \paragraph*{Lösung}
 \label{subsubsec:uebung_12.aufgabe_14a.loesung}

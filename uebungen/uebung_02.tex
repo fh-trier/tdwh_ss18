@@ -50,7 +50,7 @@ Bei Aufruf der Funktion könnte die Ausgabe für die CHANNEL\_CLASS\_ID = 13 wie
 Schreiben Sie eine Table Function, der eine Referenz auf einen Cursor übergeben wird. Dieser soll Kundendatensätze beinhalten und es soll für jeden übergebenen Datensatz der Name des Kunden, sein Land und der durch ihn generierte Umsatz in einer Collection zurückgegeben werden.
 
 Ein exemplarischer Aufruf der Funktion könnte dabei wie folgt aussehen:
-\begin{minted}[linenos, autogobble, breaklines,]{sql}
+\begin{sqlcode}
 SELECT *
 FROM TABLE(
   tf_customer(
@@ -61,7 +61,7 @@ FROM TABLE(
     )
   )
 );
-\end{minted}
+\end{sqlcode}
 
 Rückgabe bei Aufruf der Table Funktion:
 \begin{figure}[H]
@@ -96,11 +96,11 @@ Rückgabe bei Aufruf der Table Funktion:
 Schreiben Sie eine Prozedur, die für jede Tabelle in Ihrem Schema eine Kopie mit dem Präfix „tmp\_“ anlegt.
 
 Hinweis: Die View USER\_TABLES listet alle eigenen Tabellen und eine Tabellenkopie kann mit folgendem DDL-Statement erzeugt werden:
-\begin{minted}[linenos, autogobble, breaklines,]{sql}
+\begin{sqlcode}
 CREATE TABLE tmp_tabname AS
   SELECT *
   FROM tabname;
-\end{minted}
+\end{sqlcode}
 
 \subsubsection*{Lösung}
 \label{sec:uebung_02.aufgabe_05.loesung}
