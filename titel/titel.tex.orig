@@ -1,0 +1,39 @@
+\begin{titlepage}
+  \begin{center}
+    \begin{large}
+      Klausur SS/WSXX, Tutorium SS/WSXX oder Zusammenfassung 
+    \end{large}
+    
+    \begin{huge}
+      \begin{singlespace}
+<<<<<<< HEAD
+            \textbf{Modul}
+=======
+            \textbf{Data-Warehouse}
+>>>>>>> fix: title page with new logo
+      \end{singlespace}
+    \end{huge}
+
+    \vspace{0.5cm}
+
+    \begin{figure}[h]
+      \centering
+      \includegraphics[width=0.70\textwidth]{img//warehouse-logo.png}
+      \label{img:fh-trier-logo}
+    \end{figure}
+
+    \vspace{1cm}
+    
+    \begin{large}
+      \textit{Markus Pesch} \\
+      \textit{peschm@hochschule-trier.de}
+    \end{large}
+    
+    \vspace{2cm}
+    
+    Latex Quellcode auf \input{./git-url.tmp} \\
+    basierend auf git commit \input{git-id.tmp} vom \input{git-date.tmp}
+    
+    
+  \end{center}
+\end{titlepage}
