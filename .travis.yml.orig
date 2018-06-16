@@ -1,12 +1,15 @@
 sudo: required
+branches:
+  only:
+    - master
 language: latex
 services:
-- docker
+  - docker
 before_install:
-- docker pull blang/latex:ubuntu
+  - docker pull blang/latex:ubuntu
 script:
-- make docker-pdf
 <<<<<<< HEAD
+- make docker-pdf
 #before_deploy:
 #- git config --local user.name "Markus Pesch"
 #- git config --local user.email "markus.pesch@cryptic.systems"
@@ -23,15 +26,21 @@ script:
 #  global:
 #    secure: sjT2d6QeNIQd5Hjr8yy0CIguzcNUePcxLO+siM4163zIrfoPasDBDThvHn1eicKhzo6wVSKMavbb6zDJw5HR1jEXsC4WZyD1HsHzS0zrtY7qyrFenYNO+0bfzhUwSVekAnLC/F5wSV5/qTOT7/JszkFtDsvqmwSTXqIAQM0z94WzM8fbBt0ovboYOvHJ0Pp9oOrNs6J3Pp8rsgqAklhPgHW8ERlbh5LNOzdLMyo1rVwuePqwOh5dyjWbTvWzsAatnEAkerf9Ld78UuEXiOcEFdT5O7WkmtgQtpzu9s1AbX64ZD8H8UFGdJEzcVIryBReD7K+hwhHD/wnhSmyqNbIZrCiCWEo2saOOcc/6nSKbBp77bv+okZVS5W7iIof32Z4lAQcohnc0ioJQOdIc6CUOulJretLF5+I+G00EbakYz2Y73izCbhcDlwlf8aa6vsvctnnQ/PovUK2ZguzjHR1nn0muCG/4kmQWjnlsCzD2ZCrP6esIvL8PA3sCsG0oxCJpiuzsaxVBkXWHV5ZiYBP5MgycflAVgJeHTZn8ndUeg9tkAyCpMgmBdTIubRCy7VWlLz4RC6x6jEryuAMQDi48SuhGAmPtlKhpk8nJTQXGD2ckf1lXYJbm2WPQqAhhCLRUboWO+kPgkJH7Yilxe2S2kA8FDP0oZVvmhaon2IieAU=
 =======
+  - make docker-pdf
 before_deploy:
-- git config --local user.name "Markus Pesch"
-- git config --local user.email "markus.pesch@cryptic.systems"
+  - git config --local user.name "Markus Pesch"
+  - git config --local user.email "markus.pesch@cryptic.systems"
+  - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
 deploy:
   provider: releases
-  api_key: GITHUB OAUTH TOKEN
-  file: index.pdf
+  api_key:
+    secure: VmcPrgXR5Vh9fXxRx9VFcQ3eQH2heV0aTQfK1jRwpMEbC2ow8QVNxRSSYsDEhgOOuM7qrVbg3N6/WAhzSjThOrVygrirU6vqyzqrxPO1u8ZRCd+z0AxVutNBuFvvXyVGzA7UNaoyzlqwAWi1v+udshy+ZmboDBPH/OC2x4Ql5BLrBB4JyRjaxdy/Z4rfYDD/HcGznWjEZx2n8rFZx8V/6gZT4hThs2kA4LOXCGlxcJ8f1EVIi4sXSnCcLsKqWA3b+jOTvGAp+y/w8648KROja+03NkbTa3Ww4wOWdXLOe4VXQ+uRdUqW7pwR8G0pTOAPL7/2XVKb2tQ5SG1OtzuSR78iKdzmlbzfi2xIrzV6U685PctVg3HIBSGPCt7H4L54wHFbaPHwHI0sdJ0wi7c5cRU6Is721Rpszi2cFbsSTKHqIjak55/AyKtbVhTK7M4kHNyLHamdIc+kLLrjGYfMjOywiJqmLaI1ddiL5Yp9lmKNhyvE88ad57mDpHJslm3wDDygX+5G1N/JE9biC+L9x2INeJRyTM3Sqi9xyHDpx8x45AEysjrVTvNOY0ATwB5LS1CbjJPgjj6FeeF/DRWHUsqw4zwO+QqtESgl1NOLrGFqrEYB9OLbxLcVNOvreEu9Iew7AtoB0xmaMMoDlDtJdHUD0bMUkocCgf82YOEbTds=
+  file: "index.pdf"
+  on:
+    repo: volker-raschek/tdwh_ss18
+#    tags: true
   skip_cleanup: true
 env:
   global:
     secure: sjT2d6QeNIQd5Hjr8yy0CIguzcNUePcxLO+siM4163zIrfoPasDBDThvHn1eicKhzo6wVSKMavbb6zDJw5HR1jEXsC4WZyD1HsHzS0zrtY7qyrFenYNO+0bfzhUwSVekAnLC/F5wSV5/qTOT7/JszkFtDsvqmwSTXqIAQM0z94WzM8fbBt0ovboYOvHJ0Pp9oOrNs6J3Pp8rsgqAklhPgHW8ERlbh5LNOzdLMyo1rVwuePqwOh5dyjWbTvWzsAatnEAkerf9Ld78UuEXiOcEFdT5O7WkmtgQtpzu9s1AbX64ZD8H8UFGdJEzcVIryBReD7K+hwhHD/wnhSmyqNbIZrCiCWEo2saOOcc/6nSKbBp77bv+okZVS5W7iIof32Z4lAQcohnc0ioJQOdIc6CUOulJretLF5+I+G00EbakYz2Y73izCbhcDlwlf8aa6vsvctnnQ/PovUK2ZguzjHR1nn0muCG/4kmQWjnlsCzD2ZCrP6esIvL8PA3sCsG0oxCJpiuzsaxVBkXWHV5ZiYBP5MgycflAVgJeHTZn8ndUeg9tkAyCpMgmBdTIubRCy7VWlLz4RC6x6jEryuAMQDi48SuhGAmPtlKhpk8nJTQXGD2ckf1lXYJbm2WPQqAhhCLRUboWO+kPgkJH7Yilxe2S2kA8FDP0oZVvmhaon2IieAU=
->>>>>>> fix: travis.yml
+>>>>>>> fix: build only for master branch
