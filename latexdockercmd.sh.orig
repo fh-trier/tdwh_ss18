@@ -1,0 +1,8 @@
+#!/bin/sh
+IMAGE=blang/latex:ubuntu
+exec docker run --rm -i --user="$(id -u):$(id -g)" --net=none -v "$PWD":/data "$IMAGE" "$@"
+<<<<<<< HEAD
+=======
+exit 0
+
+>>>>>>> fix: README, travis
