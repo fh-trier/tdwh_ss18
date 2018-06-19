@@ -5,7 +5,7 @@ Führe den Inhalt des Skripts oehr\_dwhSS18.sql aus dem Verzeichnis data aus. Da
 % ##########################################################################
 % ############################### Aufgabe 01 ###############################
 % ##########################################################################
-\subsection{Aufgabe}
+\subsection{Aufgabe - NestedTable, VArray, AArray}
 \label{sec:uebung_02.aufgabe_01}
 Schreiben Sie eine Prozedur, welche auf die Tabelle LOCATIONS zugreift und
 \begin{itemize}
@@ -23,7 +23,7 @@ Anschließend sollen die LOCATION\_ID und CITY aller drei Collections ausgegeben
 % ##########################################################################
 % ############################### Aufgabe 02 ###############################
 % ##########################################################################
-\subsection{Aufgabe}
+\subsection{Aufgabe - Table Function}
 \label{sec:uebung_02.aufgabe_02}
 Schreiben Sie eine Table Function, der eine CHANNEL\_CLASS\_ID übergeben wird und für diese Absatzklasse die Bezeichnung, Absatzkanäle, die Anzahl aller Bestellungen sowie den durchschnittlichen Bestellwert über den Absatzkanal in einer Collection zurückgibt.
 
@@ -45,7 +45,7 @@ Bei Aufruf der Funktion könnte die Ausgabe für die CHANNEL\_CLASS\_ID = 13 wie
 % ##########################################################################
 % ############################### Aufgabe 03 ###############################
 % ##########################################################################
-\subsection{Aufgabe}
+\subsection{Aufgabe - Table Function}
 \label{sec:uebung_02.aufgabe_03}
 Schreiben Sie eine Table Function, der eine Referenz auf einen Cursor übergeben wird. Dieser soll Kundendatensätze beinhalten und es soll für jeden übergebenen Datensatz der Name des Kunden, sein Land und der durch ihn generierte Umsatz in einer Collection zurückgegeben werden.
 
@@ -79,7 +79,7 @@ Rückgabe bei Aufruf der Table Funktion:
 % ##########################################################################
 % ############################### Aufgabe 04 ###############################
 % ##########################################################################
-\subsection{Aufgabe}
+\subsection{Aufgabe - Pipelined Table Function}
 \label{sec:uebung_02.aufgabe_04}
 Ändern Sie die Funktion aus Aufgabe \ref{sec:uebung_02.aufgabe_03} so ab, dass es sich um eine Pipelined Table Function handelt.
 
@@ -91,7 +91,7 @@ Rückgabe bei Aufruf der Table Funktion:
 % ##########################################################################
 % ############################### Aufgabe 05 ###############################
 % ##########################################################################
-\subsection{Aufgabe}
+\subsection{Aufgabe - Procedure}
 \label{sec:uebung_02.aufgabe_05}
 Schreiben Sie eine Prozedur, die für jede Tabelle in Ihrem Schema eine Kopie mit dem Präfix „tmp\_“ anlegt.
 
@@ -110,7 +110,7 @@ CREATE TABLE tmp_tabname AS
 % ##########################################################################
 % ############################### Aufgabe 06 ###############################
 % ##########################################################################
-\subsection{Aufgabe}
+\subsection{Aufgabe - Procedure}
 \label{sec:uebung_02.aufgabe_06}
 Erzeugen Sie eine weitere Prozedur, die ein Pattern (z.B. '\%A\%') über einen Eingabeparameter erwartet und alle Tabellen löscht, deren Name dem übergebenen Pattern entspricht. Verwenden Sie BIND Variablen wo es möglich ist.
 
