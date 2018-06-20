@@ -8,11 +8,27 @@
 \label{sec:uebung_06.aufgabe_01}
 Erzeuge folgende Übersicht über die Anzahl der Mitarbeiter in jeder Abteilung, in jeder Stadt und in jedem Land.
 
-\begin{figure}[H]
+\begin{table}[H]
   \centering
-  \includegraphics[width=1\textwidth]{img//uebung_06_-_aufgabe_01.png}
-  \label{img:uebung_06_-_aufgabe_01}
-\end{figure}
+  \ttfamily
+  \small
+  \begin{tabular}{|l|l|l|l|}
+    \hline
+    \textbf{DEPARTMENT\_NAME}  & \textbf{CITY}   & \textbf{COUNTRY\_NAME}   & \textbf{ANZAHL}   \\
+    \hline
+    Human Resources           & London          & United Kingdom          & 1                 \\
+    Human Resources           & London          & \textit{(null)}         & 1                 \\
+    Human Resources           & \textit{(null)} & \textit{(null)}         & 1                 \\
+    Public Relations          & Munich          & Germany                 & 1                 \\
+    Public Relations          & Munich          & \textit{(null)}         & 1                 \\
+    Public Relations          & \textit{(null)} & \textit{(null)}         & 1                 \\
+    Sales Africa Middel East  & Kuwait-City     & Kuwait                  & 40                \\
+    Sales Africa Middel East  & Kuwait-City     & \textit{(null)}         & 40                \\
+    Sales Africa Middel East  & \textit{(null)} & \textit{(null)}         & 40                \\
+    \textit{(null)}           & \textit{(null)} & \textit{(null)}         & 42                \\
+    \hline
+  \end{tabular}
+\end{table}
 
 \subsubsection*{Lösung}
 \label{sec:uebung_06.aufgabe_01.loesung}
@@ -25,7 +41,6 @@ Erzeuge folgende Übersicht über die Anzahl der Mitarbeiter in jeder Abteilung,
 \subsection{Aufgabe}
 \label{sec:uebung_06.aufgabe_02}
 Zur Übersicht der Mitarbeitergehälter soll folgende Ausgabe mittels geeigneter Gruppierung erreicht werden.
-
 
 \begin{table}[H]
   \centering
