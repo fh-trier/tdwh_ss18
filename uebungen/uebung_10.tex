@@ -18,11 +18,22 @@ Jedes JSON-Dokument, in der Spalte jsonord, besitzt folgenden Aufbau:
 \label{sec:uebung_10.aufgabe_01}
 Erzeuge folgende Bestellübersicht, in der nur Bestellungen aus 2014 berücksichtigt werden.
 
-\begin{figure}[H]
+\begin{table}[H]
   \centering
-  \includegraphics[width=0.75\textwidth]{img//uebung_10_-_aufgabe_01.png}
-  \label{img:uebung_10_-_aufgabe_01}
-\end{figure}
+  \ttfamily
+  \begin{tabular}{|l|l|l|l|}
+    \hline
+    \textbf{FIRST}  & \textbf{LAST}   & \textbf{GEND} & \textbf{PHONE}      \\
+    \hline
+    Lakeisha Wood   & Cameron         & female        & +1 (914) 536-2858   \\
+    Jenifer Silva   & Sexton          & female        & +1 (932) 510-3597   \\
+    Wright Cate     & Simmons         & male          & +1 (978) 575-3520   \\
+    Lynn May        & Mardin          & male          & +1 (988) 582-3186   \\
+    Ruitt Hays      & Mann            & male          & +1 (965) 502-3118   \\
+    Wilma Sparks    & Vega            & female        & +1 (861) 454-3116   \\
+    \hline
+  \end{tabular}
+\end{table}
 
 % ############################### Aufgabe 01A #############################
 \subsubsection{Aufgabe}
@@ -51,11 +62,27 @@ Mithilfe der Funktion json\_table().
 \label{sec:uebung_10.aufgabe_02}
 Erzeuge folgende Übersicht, die alle Bestellpositionen darstellt.
 
-\begin{figure}[H]
+\begin{table}[H]
   \centering
-  \includegraphics[width=0.6\textwidth]{img//uebung_10_-_aufgabe_02.png}
-  \label{img:uebung_10_-_aufgabe_02}
-\end{figure}
+  \ttfamily
+  \begin{tabular}{|l|l|l|r|r|}
+    \hline
+    \textbf{LAST} & \textbf{GEND} & \textbf{PHONE}    & \textbf{PROD\_ID} & \textbf{QUANT}  \\
+    \hline
+    Mann          & male          & +1 (965) 502-3118 & 2323              & 59              \\
+    Mann          & male          & +1 (965) 502-3118 & 2321              & 55              \\
+    Mann          & male          & +1 (965) 502-3118 & 2393              & 21              \\
+    Mann          & male          & +1 (965) 502-3118 & 2337              & 37              \\
+    Mann          & male          & +1 (965) 502-3118 & 1763              & 25              \\
+    Mann          & male          & +1 (965) 502-3118 & 2308              & 22              \\
+    Mann          & male          & +1 (965) 502-3118 & 1763              & 28              \\
+    Mann          & male          & +1 (965) 502-3118 & 2311              & 43              \\
+    English       & female        & +1 (947) 528-3476 & 2359              & 36              \\
+    English       & female        & +1 (947) 528-3476 & 1772              & 44              \\
+    English       & female        & +1 (947) 528-3476 & 1772              & 25              \\
+    \hline
+  \end{tabular}
+\end{table}
 
 \subsection*{Lösung}
 \label{sec:uebung_10.aufgabe_02.loesung}
@@ -69,11 +96,19 @@ Erzeuge folgende Übersicht, die alle Bestellpositionen darstellt.
 \label{sec:uebung_10.aufgabe_03}
 Erzeuge eine Übersicht, die für alle Webkunden die abgesetzte Menge je aktivem und nicht aktivem Mitglied sowie die insgesamt abgesetzte Menge zurückgibt.
 
-\begin{figure}[H]
+\begin{table}[H]
   \centering
-  \includegraphics[width=0.25\textwidth]{img//uebung_10_-_aufgabe_03.png}
-  \label{img:uebung_10_-_aufgabe_03}
-\end{figure}
+  \ttfamily
+  \begin{tabular}{|l|r|}
+    \hline
+    \textbf{ACTIVE} & \textbf{SUM\_QUANT} \\
+    \hline
+    false           & 5889                \\
+    true            & 4123                \\
+    (null)          & 10012               \\
+    \hline
+  \end{tabular}
+\end{table}
 
 \subsection*{Lösung}
 \label{sec:uebung_10.aufgabe_03.loesung}
