@@ -29,12 +29,19 @@ Schreiben Sie eine Table Function, der eine CHANNEL\_CLASS\_ID übergeben wird u
 
 Bei Aufruf der Funktion könnte die Ausgabe für die CHANNEL\_CLASS\_ID = 13 wie folgt aussehen:
 
-\begin{figure}[H]
+\begin{table}[H]
   \centering
-  \includegraphics[width=0.85\textwidth]{img//uebung_02_-_aufgabe_02.png}
-  \label{img:uebung_02_-_aufgabe_02}
-  \caption{Table Function}{CHANNEL\_CLASS\_ID = 13}
-\end{figure}
+  \ttfamily
+  \small
+  \begin{tabular}{|l|l|l|l|l|l|}
+    \hline
+    \textbf{CH\_CLASS\_ID} & \textbf{CH\_CLASS} & \textbf{CH\_ID}  & \textbf{CH\_DESC}  & \textbf{COUNT\_ORDERS}  & \textbf{AVG\_ORDERS}  \\
+    \hline
+    13                          & Indirect                & 5                     & Catalog                 & 2                       & 33849,2               \\
+    13                          & Indirect                & 4                     & Internet                & 2                       & 15232,2               \\
+    \hline
+  \end{tabular}
+\end{table}
 
 
 \subsubsection*{Lösung}
@@ -64,12 +71,32 @@ FROM TABLE(
 \end{sqlcode}
 
 Rückgabe bei Aufruf der Table Funktion:
-\begin{figure}[H]
+\begin{table}[H]
   \centering
-  \includegraphics[width=0.75\textwidth]{img//uebung_02_-_aufgabe_03.png}
-  \label{img:uebung_02_-_aufgabe_03}
-  \caption{Rückgabe}{Rückgabe bei Aufruf der Table Function}
-\end{figure}
+  \ttfamily
+  \small
+  \begin{tabular}{|l|l|l|l|l|l|}
+    \hline
+    \textbf{CUSTOMER\_ID} & \textbf{NAME}           & \textbf{COUNTRY}          & \textbf{ORDER\_TOTAL}   \\
+    \hline
+    185                   & Wright, Matthew         & United States of America  & 46257                   \\
+    186                   & Alexander, Meena        & United States of America  & 94513,5                 \\
+    187                   & Dvrrie, Grace           & Argentina                 & 0                       \\
+    188                   & Buckley, Charlotte      & Germany                   & 29473,8                 \\
+    189                   & Harris-Miller, Gena     & Denmark                   & 0                       \\
+    190                   & Curtis, Gena            & Denmark                   & 59872,4                 \\
+    191                   & Sanders, Maureen        & United States of America  & 0                       \\
+    192                   & Stockwell, Sean         & United States of America  & 7826                    \\
+    193                   & Kinski, Harry dean      & United Kindgom            & 0                       \\
+    194                   & Garcia, Kathleen        & United Kindgom            & 5543,1                  \\
+    195                   & Olin, Sean              & United States of America  & 0                       \\
+    196                   & Dench, Gerard           & United States of America  & 1980,8                  \\
+    197                   & Altman, Gerad           & Zimbabwe                  & 0                       \\
+    198                   & de Funes, Maureen       & Zimbabwe                  & 0                       \\
+    199                   & Chapman, Clint          & Nigeria                   & 0                       \\
+    \hline
+  \end{tabular}
+\end{table}
 
 \subsubsection*{Lösung}
 \label{sec:uebung_02.aufgabe_03.loesung}
