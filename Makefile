@@ -7,8 +7,8 @@ TEX_NAME := ${FILE}.tex
 PDF_NAME := ${FILE}.pdf
 
 # Hardlink-Path and Hardlink-File
-HARDLINK_PATH := ${HOME}/pdf
-HARDLINK_FILE := tmp.pdf
+HARDLINK_PATH := ${HOME}/Dokumente/Studium/Fachschaftdaten/DWH_-_Data_Warehouse/Tutorien/Tutorium_SS18
+HARDLINK_FILE := Tutorium_SS18.pdf
 
 latexmk:
 	latexmk \
