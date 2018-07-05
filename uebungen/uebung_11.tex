@@ -6,6 +6,14 @@
 % ##########################################################################
 \subsection{Aufgabe}
 \label{sec:uebung_11.aufgabe_01}
+Erzeugen Sie folgende Tabelle:
+
+\begin{verbatim}
+Name      Null?   Typ
+-------   -----   --------------
+DEPTNO            NUMBER
+XMLDATA           PUBLIC.XMLTYPE
+\end{verbatim}
 
 \subsubsection*{Lösung}
 \label{sec:uebung_11.aufgabe_01.loesung}
@@ -18,6 +26,26 @@
 \subsection{Aufgabe}
 \label{sec:uebung_11.aufgabe_02}
 Füllen Sie diese mit den Werten aus der Tabelle DWH.Departments. Sie können dabei folgendes SQLX-Statement nutzen um die XML-Strukturen zu erzeugen.
+
+\begin{sqlcode}
+SELECT
+  d.department_id,
+  XMLELEMENT("department",
+    XMLELEMENT("name",
+      XMLATTRIBUTES(
+        d.department_id as "deptno"
+      ),
+      department_name
+    ),
+    XMLFOREST(
+      e.last_name as "manager",
+      l.city as "city"
+    )
+  )
+FROM departments d
+  INNER JOIN locations l ON (d.location_id = l.location_id)
+  LEFT JOIN employees e ON (d.manager_id = e.employee_id);
+\end{sqlcode}
 
 \subsubsection*{Lösung}
 \label{sec:uebung_11.aufgabe_02.loesung}
