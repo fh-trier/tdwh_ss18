@@ -65,3 +65,6 @@ delete-hardlink:
 	then \
 		rm -R ${HARDLINK_PATH}/${HARDLINK_FILE}; \
 	fi;
+
+import:
+	./import.sh
