@@ -17,7 +17,7 @@ echo "Starting Executing SQL-Files to drop/create tables for sqlldr"
 sleep 2
 
 for f in $(ls ./loesungen/**/*.sql); do
-${SQLPLUS} ${USER}/${PASSWD}@${HOST} << HERE
+${SQLPLUS} -S ${USER}/${PASSWD}@${HOST} << HERE
 start $f
 HERE
 done
