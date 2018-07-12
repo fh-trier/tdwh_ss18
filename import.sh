@@ -15,7 +15,12 @@ SQLPLUS="$(which sqlplus)"
 
 echo "Starting Executing SQL-Files to drop/create tables for sqlldr"
 sleep 2
+# Static SQL-Files
+${SQLPLUS} -S ${USER}/${PASSWD}@${HOST} << HERE
+start ./data/orderdata.sql
+HERE
 
+# All files in loesungen
 for f in $(ls ./loesungen/**/*.sql); do
 ${SQLPLUS} -S ${USER}/${PASSWD}@${HOST} << HERE
 start $f
