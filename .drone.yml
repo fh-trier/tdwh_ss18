@@ -1,0 +1,193 @@
+---
+kind: pipeline
+type: kubernetes
+name: latest
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: build
+  commands:
+  - make latexmk/index.pdf
+  image: docker.io/volkerraschek/container-latex:latest-archlinux
+  resources:
+    limits:
+      cpu: 500
+      memory: 250M
+
+- name: push-nextcloud
+  commands:
+  - curl --fail --user $WEBDAV_USER:$WEBDAV_PASSWORD --upload-file index.pdf --location https://nextcloud.cryptic.systems/remote.php/dav/files/markus.pesch/Dokumente/Studium/Fachschaftdaten/DWH_-_Data_Warehouse/Tutorien/Tutorium_SS18/Tutorium_SS18.pdf
+  environment:
+    WEBDAV_USER:
+      from_secret: webdav_username
+    WEBDAV_PASSWORD:
+      from_secret: webdav_password
+  image: docker.io/volkerraschek/container-latex:latest-archlinux
+  resources:
+    limits:
+      cpu: 50
+      memory: 25M
+  when:
+    repo:
+    - fh-trier/tdwh_ss18
+    event:
+    - push
+    - cron
+
+- name: email-notification
+  environment:
+    PLUGIN_HOST:
+      from_secret: smtp_host
+    PLUGIN_USERNAME:
+      from_secret: smtp_username
+    PLUGIN_PASSWORD:
+      from_secret: smtp_password
+    PLUGIN_FROM:
+      from_secret: smtp_mail_address
+  image: docker.io/drillster/drone-email:latest
+  resources:
+    limits:
+      cpu: 50
+      memory: 25M
+  when:
+    status:
+    - changed
+    - failure
+
+trigger:
+  event:
+    exclude:
+    - tag
+
+---
+kind: pipeline
+type: kubernetes
+name: release
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: build
+  commands:
+  - make latexmk/index.pdf
+  environment:
+    VERSION: ${DRONE_TAG}
+  image: docker.io/volkerraschek/container-latex:latest-archlinux
+  resources:
+    limits:
+      cpu: 500
+      memory: 250M
+
+- name: push-nextcloud
+  commands:
+  - curl --fail --user $WEBDAV_USER:$WEBDAV_PASSWORD --upload-file index.pdf --location https://nextcloud.cryptic.systems/remote.php/dav/files/markus.pesch/Dokumente/Studium/Fachschaftdaten/DWH_-_Data_Warehouse/Tutorien/Tutorium_SS18/Tutorium_SS18_{DRONE_TAG}.pdf
+  environment:
+    WEBDAV_USER:
+      from_secret: webdav_username
+    WEBDAV_PASSWORD:
+      from_secret: webdav_password
+  image: docker.io/volkerraschek/container-latex:latest-archlinux
+  resources:
+    limits:
+      cpu: 50
+      memory: 25M
+
+- name: push-gitea
+  image: docker.io/plugins/gitea-release:latest
+  resources:
+    limits:
+      cpu: 50
+      memory: 25M
+  settings:
+    base_url: https://git.cryptic.systems
+    api_key:
+      from_secret: gitea_token
+    files:
+    - index.pdf
+    checksum:
+    - md5
+    - sha1
+    - sha256
+    - sha512
+    - adler32
+    - crc32
+
+- name: email-notification
+  environment:
+    PLUGIN_HOST:
+      from_secret: smtp_host
+    PLUGIN_USERNAME:
+      from_secret: smtp_username
+    PLUGIN_PASSWORD:
+      from_secret: smtp_password
+    PLUGIN_FROM:
+      from_secret: smtp_mail_address
+  image: docker.io/drillster/drone-email:latest
+  resources:
+    limits:
+      cpu: 50
+      memory: 25M
+  when:
+    status:
+    - changed
+    - failure
+
+trigger:
+  event:
+  - tag
+  repo:
+  - fh-trier/tdwh_ss18
+
+---
+kind: pipeline
+type: kubernetes
+name: sync
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: github
+  image: docker.io/appleboy/drone-git-push:latest
+  resources:
+    limits:
+      cpu: 50
+      memory: 25M
+  settings:
+    branch: master
+    remote: ssh://git@github.com/fh-trier/tdwh_ss18.git
+    force: true
+    ssh_key:
+      from_secret: ssh_key
+
+- name: email-notification
+  environment:
+    PLUGIN_HOST:
+      from_secret: smtp_host
+    PLUGIN_USERNAME:
+      from_secret: smtp_username
+    PLUGIN_PASSWORD:
+      from_secret: smtp_password
+    PLUGIN_FROM:
+      from_secret: smtp_mail_address
+  image: docker.io/drillster/drone-email:latest
+  resources:
+    limits:
+      cpu: 50
+      memory: 25M
+  when:
+    status:
+    - changed
+    - failure
+
+trigger:
+  event:
+  - push
+  repo:
+  - fh-trier/tdwh_ss18
